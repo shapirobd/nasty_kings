@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./index.css";
+import React, { useState } from "react";
+import NavBar from "./components/Navbar/NavBar";
+import Router from "./Router";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+
+const theme = createTheme({
+	typography: {
+		fontFamily: ["Mukta"].join(","),
+	},
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [currentPage, setCurrentPage] = useState("");
+
+	return (
+		<ThemeProvider theme={theme}>
+			<div className="App" style={{ fontFamily: "Mukta" }}>
+				<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+				<Router />
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default App;
