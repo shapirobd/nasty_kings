@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { AppBar, Toolbar, Button, IconButton } from "@material-ui/core";
+import {
+	AppBar,
+	Toolbar,
+	Button,
+	IconButton,
+	Box,
+	List,
+} from "@material-ui/core";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 import logo from "../../images/logo_svg_2.png";
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { useStyles } from "./styles/NavBarStyles";
@@ -35,6 +45,50 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 	};
 
 	library.add(faShoppingCart, fa2);
+
+	const [state, setState] = useState({
+		top: false,
+	});
+
+	const toggleDrawer = (anchor, open) => (event) => {
+		if (
+			event.type === "keydown" &&
+			(event.key === "Tab" || event.key === "Shift")
+		) {
+			return;
+		}
+
+		setState({ ...state, [anchor]: open });
+	};
+
+	const mobileList = (anchor) => (
+		<Box
+			sx="auto"
+			role="presentation"
+			onClick={toggleDrawer(anchor, false)}
+			onKeyDown={toggleDrawer(anchor, false)}
+		>
+			<List>
+				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>{<MenuIcon />}</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+			{/* <Divider />
+			<List>
+				{["All mail", "Trash", "Spam"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List> */}
+		</Box>
+	);
 
 	return (
 		<div>

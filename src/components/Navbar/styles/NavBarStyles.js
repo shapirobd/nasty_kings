@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "center",
+		padding: "12px 0",
 	},
 	appBar: {
 		backgroundColor: "black",
@@ -17,9 +18,12 @@ export const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(2),
 	},
 	homeLink: {
+		// position: "absolute",
+		// left: "2%",
+		// top: "-2%",
+		top: "15%",
+		left: "4%",
 		position: "absolute",
-		left: "2%",
-		top: "-2%",
 	},
 	logo: {
 		height: "50px",
@@ -49,8 +53,10 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	socials: {
 		position: "absolute",
-		right: "2%",
-		top: "15%",
+		right: "5%",
+		top: "24%",
+		// right: "2%",
+		// top: "15%",
 		display: "flex",
 	},
 }));

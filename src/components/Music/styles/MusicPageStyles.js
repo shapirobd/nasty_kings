@@ -6,4 +6,8 @@ export const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		position: "absolute",
 	},
+	innerDiv: {
+		padding: "0 4%",
+		marginTop: "175px",
+	},
 }));
