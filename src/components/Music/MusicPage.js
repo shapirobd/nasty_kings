@@ -14,13 +14,14 @@ const MusicPage = () => {
 
 	return (
 		<div className={classes.main}>
-			<h1>This is the Music page</h1>
-			<SpotifyPlayer
-				uri="spotify:album:4hVuMLc8qmcagx3qOjIAFb"
-				size={size}
-				view={view}
-				theme={theme}
-			/>
+			<div className={classes.innerDiv}>
+				<SpotifyPlayer
+					uri="spotify:album:4hVuMLc8qmcagx3qOjIAFb"
+					size={size}
+					view={view}
+					theme={theme}
+				/>
+			</div>
 		</div>
 	);
 };

@@ -6,23 +6,30 @@ export const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		position: "absolute",
 	},
-	container: {
+	greysSection: {
 		height: "100%",
 		display: "flex",
-		justifyContent: "space-evenly",
-		alignItems: "center",
+		justifyContent: "space-between",
+		alignItems: "flex-end",
 	},
-	item: {
+	photoContainer: {
 		height: "100%",
-		width: "100%",
 		display: "flex",
-		justifyContent: "center",
-		alignItems: "center",
+		justifyContent: "left",
+		alignItems: "flex-end",
 		paddingLeft: "0px !important",
 		paddingRight: "0px !important",
 	},
 	photo: {
-		height: "60%",
+		height: "92%",
+	},
+	descriptionContainer: {
+		height: "100%",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
+		paddingLeft: "0px !important",
+		paddingRight: "150px !important",
 	},
 	description: {
 		color: "white",

@@ -5,5 +5,10 @@ export const useStyles = makeStyles((theme) => ({
 		height: "100%",
 		width: "100%",
 		position: "absolute",
+		backgroundColor: "#EBDFCE",
+	},
+	innerDiv: {
+		padding: "0 10%",
+		marginTop: "175px",
 	},
 }));
