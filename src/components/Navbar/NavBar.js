@@ -1,19 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import {
-	AppBar,
-	Toolbar,
-	Button,
-	IconButton,
-	Box,
-	List,
-} from "@material-ui/core";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import { AppBar, Toolbar } from "@material-ui/core";
 import logo from "../../images/logo_svg_2.png";
 import { useStyles } from "./styles/NavBarStyles";
-import MenuIcon from "@material-ui/icons/Menu";
 import NavOption from "./NavOption";
 // import { Facebook, Instagram, YouTube } from "@mui/icons-material";
 import { SocialIcon } from "react-social-icons";
@@ -23,16 +12,16 @@ import { faShoppingCart, fa2 } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = ({ currentPage, setCurrentPage }) => {
 	const classes = useStyles();
-	const navigate = useNavigate();
-	const location = useLocation();
+	// const navigate = useNavigate();
+	// const location = useLocation();
 	const [isHoveredIG, setIsHoveredIG] = useState(false);
 	const [isHoveredSP, setIsHoveredSP] = useState(false);
 	const [isHoveredYT, setIsHoveredYT] = useState(false);
-	const [isHoveredCRT, setIsHoveredCRT] = useState(false);
+	// const [isHoveredCRT, setIsHoveredCRT] = useState(false);
 
 	const options = [
 		{ route: "/music", text: "MUSIC" },
-		{ route: "/merch", text: "MERCH" },
+		// { route: "/merch", text: "MERCH" },
 		{ route: "/shows", text: "SHOWS" },
 		{ route: "/about", text: "ABOUT" },
 		{ route: "/contact", text: "CONTACT" },
@@ -43,21 +32,6 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 	};
 
 	library.add(faShoppingCart, fa2);
-
-	const [state, setState] = useState({
-		top: false,
-	});
-
-	const toggleDrawer = (anchor, open) => (event) => {
-		if (
-			event.type === "keydown" &&
-			(event.key === "Tab" || event.key === "Shift")
-		) {
-			return;
-		}
-
-		setState({ ...state, [anchor]: open });
-	};
 
 	return (
 		<div>
@@ -107,7 +81,7 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 							target="_blank"
 						/>
 						{/* <div style={{ height: "50px", display: "inline-block" }}> */}
-						<Link
+						{/* <Link
 							to="#"
 							style={{
 								display: "flex",
@@ -122,7 +96,7 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 								onMouseEnter={() => setIsHoveredCRT(true)}
 								onMouseLeave={() => setIsHoveredCRT(false)}
 							/>
-						</Link>
+						</Link> */}
 						{/* </div> */}
 					</div>
 				</Toolbar>

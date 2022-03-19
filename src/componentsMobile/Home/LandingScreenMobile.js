@@ -1,7 +1,7 @@
 import React from "react";
 import { useStyles } from "./styles/LandingScreenStyles";
 import logo from "../../images/logo_vector.png";
-import BandPic from "../../images/BandPic_4.png";
+import logo_svg_2 from "../../images/logo_svg_2.png";
 
 const LandingScreenMobile = () => {
 	const classes = useStyles();
@@ -9,9 +9,9 @@ const LandingScreenMobile = () => {
 	return (
 		<div
 			className={classes.main}
-			style={{ backgroundImage: `url(${BandPic})` }}
+			// style={{ backgroundImage: `url(${logo_svg_2})` }}
 		>
-			{/* <img className={classes.logo} src={logo} alt={logo} /> */}
+			<img className={classes.logo} src={logo_svg_2} alt={logo_svg_2} />
 		</div>
 	);
 };
