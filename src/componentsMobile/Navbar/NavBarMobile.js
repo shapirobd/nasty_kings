@@ -11,6 +11,7 @@ const NavBarMobile = ({ currentPage, setCurrentPage }) => {
 	// const location = useLocation();
 
 	const options = [
+		{ route: "/", text: "HOME" },
 		{ route: "/music", text: "MUSIC" },
 		// { route: "/merch", text: "MERCH" },
 		{ route: "/shows", text: "SHOWS" },
