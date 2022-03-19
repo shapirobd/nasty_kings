@@ -9,10 +9,10 @@ const ContactPage = () => {
 		<div className={classes.main}>
 			<Typography variant="h4">Contact/Booking</Typography>
 			<div className={classes.email}>
-				<Typography>greylanhallandthenastykings@gmail.com</Typography>
+				<Typography>greylanhallandnastykings@gmail.com</Typography>
 				<div className={classes.linkContainer}>
 					<a
-						href="mailto:greylanhallandthenastykings@gmail.com"
+						href="mailto:greylanhallandnastykings@gmail.com"
 						className={classes.link}
 					>
 						<Button
