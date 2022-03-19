@@ -20,6 +20,12 @@ const ContactPage = () => {
 							className={classes.button}
 							color="inherit"
 							variant="outlined"
+							sx={{
+								"&:active": {
+									backgroundColor: "#ffa900",
+									color: "black",
+								},
+							}}
 						>
 							Click here to email
 						</Button>
