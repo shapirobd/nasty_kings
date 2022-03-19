@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
 		position: "absolute",
 	},
 	innerDiv: {
-		padding: "0",
+		padding: "0 5%",
 		marginTop: "150px",
 	},
 }));

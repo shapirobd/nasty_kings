@@ -2,8 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		width: "100vw",
+		width: "90%",
 		height: "100vh",
+		padding: "0 5%",
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
@@ -12,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
 		backgroundPosition: "center",
 	},
 	logo: {
-		height: "75vh",
+		width: "100%",
 		borderRadius: "50%",
 	},
 }));

@@ -45,7 +45,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	socials: {
 		position: "absolute",
-		right: "5%",
+		right: "4%",
 		top: "24%",
 		// right: "2%",
 		// top: "15%",

@@ -8,26 +8,20 @@ const AboutPageMobile = () => {
 	const classes = useStyles();
 
 	return (
-		<Box className={classes.main}>
+		<div className={classes.main}>
 			<div
 				style={{
 					height: "100%",
 					width: "90%",
 					position: "absolute",
-					padding: "0 5%",
+					padding: "0%",
 				}}
 			>
-				<Grid container className={classes.greysSection}>
-					<Grid item xs={12} lg={5} className={classes.photoContainer}>
+				<div className={classes.greysSection}>
+					<div className={classes.photoContainer}>
 						<img src={greysPhoto} className={classes.photo} />
-					</Grid>
-					<Grid
-						item
-						xl={7}
-						lg={6}
-						xs={12}
-						className={classes.descriptionContainer}
-					>
+					</div>
+					<div className={classes.descriptionContainer}>
 						<Typography className={classes.description}>
 							Greylan started playing guitar at the age of 13 and immediately
 							fell in love with blues and rock n’ roll music. As he grew more
@@ -39,10 +33,10 @@ const AboutPageMobile = () => {
 							result of life long friends who all share a passion for music and
 							musical exploration.
 						</Typography>
-					</Grid>
-				</Grid>
+					</div>
+				</div>
 			</div>
-		</Box>
+		</div>
 	);
 };
 
