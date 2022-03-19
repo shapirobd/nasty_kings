@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import { useStyles } from "./styles/NavOptionStyles";
 
 // Contains buttons for the top nav bar that allow the user to login/logout/register
-const NavOption = ({ option, handlePageChange, currentPage }) => {
+const NavOptionMobile = ({ mobile, option, handlePageChange, currentPage }) => {
 	const classes = useStyles();
 
 	return (
@@ -26,4 +26,4 @@ const NavOption = ({ option, handlePageChange, currentPage }) => {
 	);
 };
 
-export default NavOption;
+export default NavOptionMobile;

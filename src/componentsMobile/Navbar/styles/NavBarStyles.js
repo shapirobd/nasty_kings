@@ -5,17 +5,14 @@ export const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "center",
-		padding: "12px 0",
+		justifyContent: "left",
+		padding: "12px 34px",
 	},
 	appBar: {
 		backgroundColor: "black",
 		zIndex: theme.zIndex.drawer + 1,
 		boxShadow: "none",
 		position: "fixed",
-	},
-	menuButton: {
-		marginRight: theme.spacing(2),
 	},
 	homeLink: {
 		// position: "absolute",
@@ -35,20 +32,5 @@ export const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			filter: "none",
 		},
-	},
-	navOptions: {
-		width: "60%",
-		display: "flex",
-		flexDirection: "row",
-		justifyContent: "center",
-		alignItems: "center",
-	},
-	socials: {
-		position: "absolute",
-		right: "5%",
-		top: "24%",
-		// right: "2%",
-		// top: "15%",
-		display: "flex",
 	},
 }));

@@ -4,7 +4,7 @@ import { Box, Grid } from "@mui/material";
 import greysPhoto from "../../images/grey_hall.jpeg";
 import { Typography } from "@material-ui/core";
 
-const AboutPage = () => {
+const AboutPageMobile = () => {
 	const classes = useStyles();
 
 	return (
@@ -46,4 +46,4 @@ const AboutPage = () => {
 	);
 };
 
-export default AboutPage;
+export default AboutPageMobile;
