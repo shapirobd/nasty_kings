@@ -12,7 +12,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import logo from "../../images/logo_svg_2.png";
-import useWindowDimensions from "../../customHooks/getWindowDimensions";
 import { useStyles } from "./styles/NavBarStyles";
 import MenuIcon from "@material-ui/icons/Menu";
 import NavOption from "./NavOption";
@@ -26,7 +25,6 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 	const classes = useStyles();
 	const navigate = useNavigate();
 	const location = useLocation();
-	const { width } = useWindowDimensions();
 	const [isHoveredIG, setIsHoveredIG] = useState(false);
 	const [isHoveredSP, setIsHoveredSP] = useState(false);
 	const [isHoveredYT, setIsHoveredYT] = useState(false);
@@ -61,66 +59,19 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
 		setState({ ...state, [anchor]: open });
 	};
 
-	const mobileList = (anchor) => (
-		<Box
-			sx="auto"
-			role="presentation"
-			onClick={toggleDrawer(anchor, false)}
-			onKeyDown={toggleDrawer(anchor, false)}
-		>
-			<List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>{<MenuIcon />}</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-			{/* <Divider />
-			<List>
-				{["All mail", "Trash", "Spam"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List> */}
-		</Box>
-	);
-
 	return (
 		<div>
 			<AppBar position="fixed" className={classes.appBar}>
 				<Toolbar classes={{ root: classes.root }}>
-					{width <= 599 && (
-						<>
-							<IconButton
-								edge="start"
-								className={classes.menuButton}
-								color="inherit"
-								aria-label="open drawer"
-							>
-								<MenuIcon />
-							</IconButton>
-						</>
-					)}
-
-					{width > 599 && (
-						<Link
-							to="/"
-							className={`${classes.homeLink}`}
-							onClick={() => setCurrentPage("")}
-						>
-							<img className={classes.logo} src={logo} alt={logo} />
-						</Link>
-					)}
-					<div
-						className={
-							width <= 599 ? classes.mobileNavOptions : classes.navOptions
-						}
+					<Link
+						to="/"
+						className={`${classes.homeLink}`}
+						onClick={() => setCurrentPage("")}
 					>
+						<img className={classes.logo} src={logo} alt={logo} />
+					</Link>
+
+					<div className={classes.navOptions}>
 						{options.map((option) => (
 							<NavOption
 								option={option}
