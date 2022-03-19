@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
 		backgroundColor: "#EBDFCE",
 	},
 	innerDiv: {
-		padding: "0 10%",
+		padding: "0",
 		marginTop: "175px",
 	},
 }));

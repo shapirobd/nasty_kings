@@ -5,18 +5,19 @@ import ShowItemMobile from "./ShowItemMobile";
 const ShowsPageMobile = () => {
 	const classes = useStyles();
 
-	function createData(venue, address, date, time, venueLink, ticketLink) {
-		return { venue, address, date, time, venueLink, ticketLink };
+	function createData(venue, address, date, time, venueLink, ticketLink, solo) {
+		return { venue, address, date, time, venueLink, ticketLink, solo };
 	}
 
 	const shows = [
 		createData(
-			"Nash Street Tavern (Solo Show)",
+			"Nash Street Tavern",
 			"250 S. Nash Sreet Hillsborough, NC",
 			{ month: "May", day: "26", year: "2022", weekDay: "THURSDAY" },
 			"6:00 PM",
 			"https://www.facebook.com/NashStreetTavern/",
-			"Free"
+			"Free",
+			true
 		),
 		createData(
 			"Highland Brewing",

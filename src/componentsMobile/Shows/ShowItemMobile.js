@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStyles } from "./styles/ShowsTableStyles";
+import { useStyles } from "./styles/ShowItemStyles";
 import { Typography } from "@mui/material";
 
 const ShowItemMobile = ({ show }) => {
@@ -7,9 +7,12 @@ const ShowItemMobile = ({ show }) => {
 
 	return (
 		<div className={classes.show}>
-			<div className={classes.date}>
-				<div className={classes.weekDay}>{show.date.weekDay}</div>
-				<div className={classes.day}>{show.date.day}</div>
+			<div className={classes.left}>
+				<div className={classes.date}>
+					<div className={classes.weekDay}>{show.date.weekDay}</div>
+					<div className={classes.day}>{show.date.day}</div>
+				</div>
+				{show.solo && <div className={classes.soloShow}>(SOLO SHOW)</div>}
 			</div>
 			<div className={classes.details}>
 				<div>
