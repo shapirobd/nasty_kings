@@ -10,7 +10,7 @@ const SinglesMobile = ({ singleList }) => {
 	return (
 		<div>
 			<Typography variant="h4" className={classes.singlesHeader}>
-				Our Latest Singles
+				Latest Singles
 			</Typography>
 			<div className={classes.albumsContainer}>
 				{singleList.map((s) => (

@@ -1,16 +1,16 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-	main: {
-		marginTop: "30%",
-		// height: "100%",
+	footer: {
 		width: "100%",
+		backgroundColor: "black",
 		// position: "absolute",
-	},
-	homeMain: {
-		// marginTop: "30%",
+		// bottom: "0%",
+		display: "flex",
+		justifyContent: "center",
 	},
 	innerDiv: {
-		padding: "0 5%",
+		width: "90%",
+		paddingBottom: "3%",
 	},
 }));

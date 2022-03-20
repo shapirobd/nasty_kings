@@ -2,17 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		height: "84%",
+		// overflow: "auto",
+		paddingTop: "5%",
 		width: "100%",
-		position: "absolute",
-		top: "3%",
+		// position: "absolute",
+		// top: "3%",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-between",
 		alignItems: "center",
 	},
 	greysSection: {
-		height: "100%",
+		// height: "100%",
 		width: "100%",
 		display: "flex",
 		flexDirection: "column",

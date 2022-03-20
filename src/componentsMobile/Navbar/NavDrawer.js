@@ -55,25 +55,19 @@ const NavDrawer = ({ options, currentPage, handlePageChange }) => {
 				<SocialIcon
 					url="https://www.instagram.com/greylanhallandthenastykings/"
 					bgColor="black"
-					fgColor={isHoveredIG ? "#C02E97" : "white"}
-					// onMouseEnter={() => setIsHoveredIG(true)}
-					// onMouseLeave={() => setIsHoveredIG(false)}
+					fgColor="white"
 					target="_blank"
 				/>
 				<SocialIcon
 					url="https://open.spotify.com/artist/3cyyYuJombwLHQ8TjGPm8M"
 					bgColor="black"
-					fgColor={isHoveredSP ? "#1BD760" : "white"}
-					// onMouseEnter={() => setIsHoveredSP(true)}
-					// onMouseLeave={() => setIsHoveredSP(false)}
+					fgColor="white"
 					target="_blank"
 				/>
 				<SocialIcon
 					url="https://www.youtube.com/channel/UCiY5ngsVEEVbGyGuUfliEFQ/featured"
 					bgColor="black"
-					fgColor={isHoveredYT ? "#ff0200" : "white"}
-					// onMouseEnter={() => setIsHoveredYT(true)}
-					// onMouseLeave={() => setIsHoveredYT(false)}
+					fgColor="white"
 					target="_blank"
 				/>
 				{/* <Link

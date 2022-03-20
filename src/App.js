@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import NavBar from "./components/Navbar/NavBar";
 import NavBarMobile from "./componentsMobile/Navbar/NavBarMobile";
 import Router from "./Router";
+import FooterMobile from "./componentsMobile/Footer/FooterMobile";
+import Footer from "./components/Footer/Footer";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import useWindowDimensions from "./customHooks/getWindowDimensions";
 import { useStyles } from "./AppStyles";
@@ -34,6 +36,7 @@ function App() {
 					<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 				)}
 				<Router mobile={width <= 599} />
+				{width <= 599 ? <FooterMobile /> : <Footer />}
 			</div>
 		</ThemeProvider>
 	);
