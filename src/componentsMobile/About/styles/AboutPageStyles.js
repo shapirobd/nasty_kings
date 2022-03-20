@@ -2,9 +2,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		height: "100%",
+		height: "84%",
 		width: "100%",
 		position: "absolute",
+		top: "3%",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-between",
@@ -41,6 +42,7 @@ export const useStyles = makeStyles((theme) => ({
 		paddingLeft: "0px !important",
 		textAlign: "justify",
 		marginTop: "5%",
+		padding: "5% 0 10%",
 		// paddingRight: "150px !important",
 	},
 	description: {

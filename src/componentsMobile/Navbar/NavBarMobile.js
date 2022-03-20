@@ -26,17 +26,15 @@ const NavBarMobile = ({ currentPage, setCurrentPage }) => {
 	library.add(faShoppingCart, fa2);
 
 	return (
-		<div>
-			<AppBar position="fixed" className={classes.appBar}>
-				<Toolbar classes={{ root: classes.root }}>
-					<NavDrawer
-						options={options}
-						currentPage={currentPage}
-						handlePageChange={handlePageChange}
-					/>
-				</Toolbar>
-			</AppBar>
-		</div>
+		<AppBar position="fixed" className={classes.appBar}>
+			<Toolbar classes={{ root: classes.root }}>
+				<NavDrawer
+					options={options}
+					currentPage={currentPage}
+					handlePageChange={handlePageChange}
+				/>
+			</Toolbar>
+		</AppBar>
 	);
 };
 
