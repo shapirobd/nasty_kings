@@ -6,6 +6,7 @@ import NavBarMobile from "./componentsMobile/Navbar/NavBarMobile";
 import Router from "./Router";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import useWindowDimensions from "./customHooks/getWindowDimensions";
+import { useStyles } from "./AppStyles";
 
 const theme = createTheme({
 	typography: {
@@ -16,10 +17,14 @@ const theme = createTheme({
 function App() {
 	const { width } = useWindowDimensions();
 	const [currentPage, setCurrentPage] = useState("");
+	const classes = useStyles();
 
 	return (
 		<ThemeProvider theme={theme}>
-			<div className="App" style={{ fontFamily: "Mukta" }}>
+			<div
+				className={width <= 599 ? classes.mobileApp : classes.app}
+				style={{ fontFamily: "Mukta" }}
+			>
 				{width <= 599 ? (
 					<NavBarMobile
 						currentPage={currentPage}
