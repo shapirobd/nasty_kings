@@ -4,7 +4,7 @@ import SpotifyPlayer from "react-spotify-player";
 import logo_bw from "../../images/logo_bw.png";
 import Singles from "./Singles";
 
-const MusicPage = () => {
+const MusicPage = ({ fromHome = false }) => {
 	const classes = useStyles();
 
 	const size = {
@@ -23,15 +23,17 @@ const MusicPage = () => {
 	];
 
 	return (
-		<div className={classes.main}>
+		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
 				<Singles singleList={singleList} />
-				<SpotifyPlayer
-					uri="spotify:album:4hVuMLc8qmcagx3qOjIAFb"
-					size={size}
-					view={view}
-					theme={theme}
-				/>
+				{!fromHome && (
+					<SpotifyPlayer
+						uri="spotify:album:4hVuMLc8qmcagx3qOjIAFb"
+						size={size}
+						view={view}
+						theme={theme}
+					/>
+				)}
 			</div>
 		</div>
 	);

@@ -9,8 +9,12 @@ const Singles = ({ singleList }) => {
 
 	return (
 		<div>
-			<Typography variant="h3" className={classes.singlesHeader}>
-				Our Latest Singles
+			<Typography
+				variant="h2"
+				className={classes.singlesHeader}
+				// sx={{ fontWeight: "bold" }}
+			>
+				Latest Singles
 			</Typography>
 			<div className={classes.albumsContainer}>
 				{singleList.map((s) => (

@@ -18,7 +18,21 @@ export const useStyles = makeStyles((theme) => ({
 		justfyContent: "start",
 	},
 	soloShow: {
-		textAlign: "center",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		height: "80px",
+	},
+	soloShowLogo: {
+		width: "70px",
+		height: "70px",
+		backgroundColor: "#044692",
+		borderRadius: "50%",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		color: "white",
 	},
 	date: {
 		height: "80px",

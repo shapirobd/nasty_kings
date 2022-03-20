@@ -1,22 +1,24 @@
 import React from "react";
 import { useStyles } from "./styles/ShowsPageStyles";
 import ShowItem from "./ShowItem";
+import { Typography } from "@mui/material";
 
-const ShowsPage = () => {
+const ShowsPage = ({ fromHome = false }) => {
 	const classes = useStyles();
 
-	function createData(venue, address, date, time, venueLink, ticketLink) {
-		return { venue, address, date, time, venueLink, ticketLink };
+	function createData(venue, address, date, time, venueLink, ticketLink, solo) {
+		return { venue, address, date, time, venueLink, ticketLink, solo };
 	}
 
 	const shows = [
 		createData(
-			"Nash Street Tavern (Solo Show)",
+			"Nash Street Tavern",
 			"250 S. Nash Sreet Hillsborough, NC",
 			{ month: "May", day: "26", year: "2022", weekDay: "THURSDAY" },
 			"6:00 PM",
 			"https://www.facebook.com/NashStreetTavern/",
-			"Free"
+			"Free",
+			true
 		),
 		createData(
 			"Highland Brewing",
@@ -29,8 +31,15 @@ const ShowsPage = () => {
 	];
 
 	return (
-		<div className={classes.main}>
+		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
+				<Typography
+					variant="h2"
+					sx={{ color: "white", fontWeight: "bold" }}
+					className={classes.showsHeader}
+				>
+					Upcoming Shows
+				</Typography>
 				{shows.map((show) => (
 					<ShowItem show={show} />
 				))}

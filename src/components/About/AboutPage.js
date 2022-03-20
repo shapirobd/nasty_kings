@@ -11,9 +11,9 @@ const AboutPage = () => {
 		<Box className={classes.main}>
 			<div
 				style={{
-					height: "100%",
+					// height: "100%",
 					width: "90%",
-					position: "absolute",
+					// position: "absolute",
 					padding: "0 5%",
 				}}
 			>
@@ -23,8 +23,8 @@ const AboutPage = () => {
 					</Grid>
 					<Grid
 						item
-						xl={7}
-						lg={6}
+						xl={6}
+						lg={5}
 						xs={12}
 						className={classes.descriptionContainer}
 					>
