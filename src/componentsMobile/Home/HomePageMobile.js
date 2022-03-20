@@ -1,13 +1,19 @@
 import React from "react";
 import { useStyles } from "./styles/HomePageStyles";
-import LandingScreenMobile from "./LandingScreenMobile";
+import MusicPageMobile from "../Music/MusicPageMobile";
+import ShowsPageMobile from "../Shows/ShowsPageMobile";
 
 const HomePageMobile = () => {
 	const classes = useStyles();
 
 	return (
 		<div className={classes.main}>
-			<h1>This is the Home page</h1>
+			<div className={classes.homeSection}>
+				<MusicPageMobile fromHome={true} />
+			</div>
+			<div className={classes.homeSection}>
+				<ShowsPageMobile fromHome={true} />
+			</div>
 		</div>
 	);
 };

@@ -2,11 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		height: "80%",
+		height: "77%",
 		width: "100%",
-		position: "absolute",
+		// position: "absolute",
 		color: "white",
-		top: "10%",
+		marginTop: "21%",
 		// marginTop: "10%",
 		display: "flex",
 		flexDirection: "column",

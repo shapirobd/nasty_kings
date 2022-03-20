@@ -1,8 +1,9 @@
 import React from "react";
 import { useStyles } from "./styles/ShowsPageStyles";
 import ShowItemMobile from "./ShowItemMobile";
+import { Typography } from "@mui/material";
 
-const ShowsPageMobile = () => {
+const ShowsPageMobile = ({ fromHome = false }) => {
 	const classes = useStyles();
 
 	function createData(venue, address, date, time, venueLink, ticketLink, solo) {
@@ -30,8 +31,15 @@ const ShowsPageMobile = () => {
 	];
 
 	return (
-		<div className={classes.main}>
+		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
+				<Typography
+					variant="h4"
+					sx={{ color: "white" }}
+					className={classes.showsHeader}
+				>
+					Upcoming Shows
+				</Typography>
 				{shows.map((show) => (
 					<ShowItemMobile show={show} />
 				))}

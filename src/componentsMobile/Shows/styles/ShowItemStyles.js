@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
 	show: {
 		backgroundColor: "white",
 		paddingRight: "20px",
-		margin: "50px 0",
+		marginBottom: "50px",
 		height: "fit-content",
 		boxShadow: "0 0 20px 1px rgb(0 0 0 / 10%)",
 		// borderRadius: "10px",
