@@ -4,9 +4,13 @@ export const useStyles = makeStyles((theme) => ({
 	footer: {
 		width: "100%",
 		backgroundColor: "black",
+		// position: "absolute",
+		// bottom: "0%",
+		display: "flex",
+		justifyContent: "center",
 	},
 	innerDiv: {
 		width: "90%",
-		padding: "5% 0",
+		paddingBottom: "20px",
 	},
 }));

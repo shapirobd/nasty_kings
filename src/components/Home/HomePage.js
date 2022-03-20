@@ -1,13 +1,19 @@
 import React from "react";
 import { useStyles } from "./styles/HomePageStyles";
-import LandingScreen from "./LandingScreen";
+import MusicPage from "../Music/MusicPage";
+import ShowsPage from "../Shows/ShowsPage";
 
 const HomePage = () => {
 	const classes = useStyles();
 
 	return (
 		<div className={classes.main}>
-			<h1>This is the Home page</h1>
+			<div className={classes.homeSection}>
+				<MusicPage fromHome={true} />
+			</div>
+			<div className={classes.homeSection}>
+				<ShowsPage fromHome={true} />
+			</div>
 		</div>
 	);
 };

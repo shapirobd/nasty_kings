@@ -1,12 +1,25 @@
 import * as React from "react";
-import { useStyles } from "./styles/ShowsTableStyles";
+import { useStyles } from "./styles/ShowsItemStyles";
 import { Typography } from "@mui/material";
+import solo_show from "../../images/solo_show_sm.png";
 
 const ShowItem = ({ show }) => {
 	const classes = useStyles();
 
 	return (
 		<div className={classes.show}>
+			{show.solo && (
+				<div className={classes.soloShow}>
+					<div className={classes.soloShowLogo}>
+						<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
+							SOLO
+						</b>
+						<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
+							SHOW
+						</b>
+					</div>
+				</div>
+			)}
 			<div className={classes.date}>
 				<div className={classes.weekDay}>{show.date.weekDay}</div>
 				<div className={classes.day}>{show.date.day}</div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useStyles } from "./styles/ShowItemStyles";
 import { Typography } from "@mui/material";
+import solo_show from "../../images/solo_show_sm.png";
 
 const ShowItemMobile = ({ show }) => {
 	const classes = useStyles();
@@ -12,7 +13,18 @@ const ShowItemMobile = ({ show }) => {
 					<div className={classes.weekDay}>{show.date.weekDay}</div>
 					<div className={classes.day}>{show.date.day}</div>
 				</div>
-				{show.solo && <div className={classes.soloShow}>(SOLO SHOW)</div>}
+				{show.solo && (
+					<div className={classes.soloShow}>
+						<div className={classes.soloShowLogo}>
+							<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
+								SOLO
+							</b>
+							<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
+								SHOW
+							</b>
+						</div>
+					</div>
+				)}
 			</div>
 			<div className={classes.details}>
 				<div>
