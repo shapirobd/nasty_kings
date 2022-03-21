@@ -33,13 +33,13 @@ const ShowsPage = ({ fromHome = false }) => {
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
-				<Typography
-					variant="h2"
-					sx={{ color: "white", fontWeight: "bold" }}
-					className={classes.showsHeader}
+				<h2
+					// variant="h2"
+					// sx={{ color: "white", fontWeight: "bold" }}s
+					className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
 				>
 					Upcoming Shows
-				</Typography>
+				</h2>
 				{shows.map((show) => (
 					<ShowItem show={show} />
 				))}

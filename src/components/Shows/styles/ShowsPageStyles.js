@@ -27,5 +27,16 @@ export const useStyles = makeStyles((theme) => ({
 	showsHeader: {
 		paddingBottom: "40px",
 		fontWeight: "bold",
+		color: "white",
+		fontSize: "3.75rem",
+		// marginBottom: "30px",
+		margin: "0",
+	},
+	homeShowsHeader: {
+		// paddingBottom: "10%",
+		fontWeight: "bold",
+		color: "white",
+		fontSize: "3.75rem",
+		marginBottom: "30px",
 	},
 }));
