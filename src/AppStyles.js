@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
 	mobileApp: {
 		textAlign: "center",
 		backgroundColor: "#000",
-		height: "90.5vh",
+		height: "100vh",
 		overflow: "auto",
 		position: "relative",
 	},
