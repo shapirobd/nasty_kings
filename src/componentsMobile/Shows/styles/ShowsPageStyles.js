@@ -25,5 +25,6 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	showsHeader: {
 		paddingBottom: "10%",
+		fontWeight: "bold",
 	},
 }));

@@ -35,7 +35,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 			<div className={classes.innerDiv}>
 				<Typography
 					variant="h4"
-					sx={{ color: "white" }}
+					sx={{ color: "white", fontWeight: "bold" }}
 					className={classes.showsHeader}
 				>
 					Upcoming Shows
