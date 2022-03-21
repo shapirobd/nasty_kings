@@ -8,6 +8,7 @@ export const useStyles = makeStyles((theme) => ({
 		// bottom: "0%",
 		display: "flex",
 		justifyContent: "center",
+		margin: "30px 0",
 	},
 	innerDiv: {
 		width: "90%",

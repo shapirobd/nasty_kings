@@ -1,9 +1,12 @@
 import React from "react";
 import { useStyles } from "./styles/ContactPageStyles";
 import { Typography, Button } from "@mui/material";
+import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
 const ContactPage = () => {
 	const classes = useStyles();
+
+	const { width } = useWindowDimensions();
 
 	return (
 		<div className={classes.main}>

@@ -30,7 +30,7 @@ const FooterMobile = () => {
 					/>
 				</div>
 				<Typography sx={{ color: "white" }} variant="caption">
-					© 2022, Greylan Hall and The Nasty Kings
+					© 2022 Greylan Hall and The Nasty Kings
 				</Typography>
 			</div>
 		</div>

@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	innerDiv: {
 		height: "100%",
-		padding: "13% 0",
+		padding: "13% 1%",
 		display: "flex",
 		flexDirection: "column",
 		// justifyContent: "space-evenly",

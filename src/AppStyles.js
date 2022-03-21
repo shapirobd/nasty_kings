@@ -14,5 +14,9 @@ export const useStyles = makeStyles((theme) => ({
 		height: "100vh",
 		overflow: "auto",
 		position: "relative",
+		margin: "0 10px",
+		// maxWidth: "1080px",
+		// marginTop: "20%",
+		// display: "flex",
 	},
 }));
