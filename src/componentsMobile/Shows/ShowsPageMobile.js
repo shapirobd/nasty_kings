@@ -33,13 +33,13 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
-				<Typography
-					variant="h4"
-					sx={{ color: "white", fontWeight: "bold" }}
-					className={classes.showsHeader}
+				<h4
+					// variant="h4"
+					// sx={{ color: "white", fontWeight: "bold" }}
+					className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
 				>
 					Upcoming Shows
-				</Typography>
+				</h4>
 				{shows.map((show) => (
 					<ShowItemMobile show={show} />
 				))}
