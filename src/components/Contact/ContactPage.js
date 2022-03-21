@@ -7,9 +7,11 @@ const ContactPage = () => {
 
 	return (
 		<div className={classes.main}>
-			<Typography variant="h3">Contact/Booking</Typography>
+			<h3 style={{ fontSize: "3rem", margin: "0" }}>Contact/Booking</h3>
 			<div className={classes.email}>
-				<Typography variant="h5">greylanhallandnastykings@gmail.com</Typography>
+				<h5 style={{ fontSize: "1.5rem", margin: "0" }}>
+					greylanhallandnastykings@gmail.com
+				</h5>
 				<div className={classes.linkContainer}>
 					<a
 						href="mailto:greylanhallandnastykings@gmail.com"
