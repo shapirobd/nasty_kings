@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
 		overflow: "auto",
 		position: "relative",
 		display: "flex",
-		flexDirectiion: "column",
+		flexDirection: "column",
 		justifyContent: "space-between",
 	},
 	mobileApp: {
