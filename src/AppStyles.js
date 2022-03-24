@@ -7,6 +7,9 @@ export const useStyles = makeStyles((theme) => ({
 		minHeight: "100vh",
 		overflow: "auto",
 		position: "relative",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "space-between",
 	},
 	mobileApp: {
 		textAlign: "center",
