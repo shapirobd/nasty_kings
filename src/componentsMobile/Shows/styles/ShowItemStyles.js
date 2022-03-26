@@ -70,6 +70,7 @@ export const useStyles = makeStyles((theme) => ({
 	venue: {
 		fontSize: "20pt",
 		fontWeight: "bold",
+		lineHeight: "110%",
 	},
 	address: {
 		fontSize: "14pt",
@@ -79,6 +80,12 @@ export const useStyles = makeStyles((theme) => ({
 		textDecoration: "none",
 		color: "blue",
 		fontSize: "14pt",
-		lineHeight: "225%",
+		// lineHeight: "225%",
+		display: "flex",
+		alignItems: "center",
+	},
+	newTabIcon: {
+		marginLeft: "8px",
+		height: "13px",
 	},
 }));

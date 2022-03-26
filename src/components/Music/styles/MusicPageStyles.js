@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
 	homeMain: {
 		width: "100%",
 		// position: "absolute",
-		marginBottom: "90px",
+		// marginBottom: "90px",
 	},
 	innerDiv: {
 		padding: "0 4%",

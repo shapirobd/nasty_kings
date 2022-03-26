@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
 	main: {
 		width: "90%",
 		height: "55%",
-		margin: "30% 0 0 0",
+		margin: "30% 0 20% 0",
 		padding: "0 5%",
 		display: "flex",
 		justifyContent: "center",
@@ -15,6 +15,6 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	logo: {
 		width: "100%",
-		borderRadius: "50%",
+		// borderRadius: "50%",
 	},
 }));

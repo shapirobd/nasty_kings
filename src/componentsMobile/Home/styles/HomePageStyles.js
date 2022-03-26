@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	homeSection: {
 		minHeight: "100%",
-		paddingTop: "20%",
+		// paddingTop: "20%",
 		// marginBottom: "20%",
 		display: "flex",
 		flexDirection: "column",

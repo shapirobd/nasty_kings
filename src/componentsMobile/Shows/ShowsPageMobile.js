@@ -41,7 +41,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 					Upcoming Shows
 				</h4>
 				{shows.map((show) => (
-					<ShowItemMobile show={show} />
+					<ShowItemMobile key={`${show.venue}__${show.date}`} show={show} />
 				))}
 			</div>
 		</div>
