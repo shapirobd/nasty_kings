@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
 		height: "50px",
 		margin: "4px 0 0 0",
 		padding: "4px",
-		borderRadius: "50%",
+		// borderRadius: "50%",
 		filter:
 			"invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%)",
 		"&:hover": {

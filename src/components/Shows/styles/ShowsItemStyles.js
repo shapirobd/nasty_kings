@@ -73,5 +73,11 @@ export const useStyles = makeStyles((theme) => ({
 		textDecoration: "none",
 		color: "blue",
 		fontSize: "14pt",
+		display: "flex",
+		alignItems: "center",
+	},
+	newTabIcon: {
+		marginLeft: "8px",
+		height: "13px",
 	},
 }));
