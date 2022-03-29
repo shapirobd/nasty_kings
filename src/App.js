@@ -35,8 +35,17 @@ function App() {
 				) : (
 					<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 				)}
-				<Router mobile={width <= 599} />
-				{width <= 599 ? <FooterMobile /> : <Footer />}
+				{width <= 599 ? (
+					<div className={classes.mainContainer}>
+						<Router mobile={width <= 599} />
+						{width <= 599 ? <FooterMobile /> : <Footer />}
+					</div>
+				) : (
+					<>
+						<Router mobile={width <= 599} />
+						{width <= 599 ? <FooterMobile /> : <Footer />}
+					</>
+				)}
 			</div>
 		</ThemeProvider>
 	);
