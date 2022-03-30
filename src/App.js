@@ -26,14 +26,14 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<div
-				className={width <= 599 ? classes.mobileApp : classes.app}
+				className={width <= 760 ? classes.mobileApp : classes.app}
 				style={
-					width <= 599
+					width <= 760
 						? { fontFamily: "Mukta", height: height }
 						: { fontFamily: "Mukta" }
 				}
 			>
-				{width <= 599 ? (
+				{width <= 760 ? (
 					<NavBarMobile
 						currentPage={currentPage}
 						setCurrentPage={setCurrentPage}
@@ -41,15 +41,17 @@ function App() {
 				) : (
 					<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 				)}
-				{width <= 599 ? (
+				{width <= 760 ? (
 					<div id="main-container" className={classes.mainContainer}>
-						<Router mobile={width <= 599} />
-						{width <= 599 ? <FooterMobile /> : <Footer />}
+						<div className={classes.innerMainContainer}>
+							<Router mobile={width <= 760} />
+							{width <= 760 ? <FooterMobile /> : <Footer />}
+						</div>
 					</div>
 				) : (
 					<>
-						<Router mobile={width <= 599} />
-						{width <= 599 ? <FooterMobile /> : <Footer />}
+						<Router mobile={width <= 760} />
+						{width <= 760 ? <FooterMobile /> : <Footer />}
 					</>
 				)}
 			</div>
