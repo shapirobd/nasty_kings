@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
 		position: "absolute",
 		bottom: "0",
 		overflow: "auto",
-		margin: "0 2%",
+		// margin: "0 2%",
 		display: "flex",
 		justifyContent: "center",
 	},
