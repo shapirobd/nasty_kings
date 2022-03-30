@@ -28,10 +28,17 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	mainContainer: {
 		height: "90%",
-		width: "96%",
+		width: "100%",
 		position: "absolute",
 		bottom: "0",
 		overflow: "auto",
 		margin: "0 2%",
+		display: "flex",
+		justifyContent: "center",
+	},
+	innerMainContainer: {
+		height: "fit-content",
+		width: "96%",
+		// margin: "0 2%",
 	},
 }));

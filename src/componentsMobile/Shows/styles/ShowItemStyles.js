@@ -3,9 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
 	show: {
 		backgroundColor: "white",
-		paddingRight: "20px",
+		// paddingRight: "20px",
 		marginBottom: "50px",
 		height: "fit-content",
+		width: "100%",
 		boxShadow: "0 0 20px 1px rgb(0 0 0 / 10%)",
 		// borderRadius: "10px",
 		display: "flex",
