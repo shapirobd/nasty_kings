@@ -43,10 +43,10 @@ function App() {
 				)}
 				{width <= 760 ? (
 					<div id="main-container" className={classes.mainContainer}>
-						<div className={classes.innerMainContainer}>
-							<Router mobile={width <= 760} />
-							{width <= 760 ? <FooterMobile /> : <Footer />}
-						</div>
+						{/* <div className={classes.innerMainContainer}> */}
+						<Router mobile={width <= 760} />
+						{width <= 760 ? <FooterMobile /> : <Footer />}
+						{/* </div> */}
 					</div>
 				) : (
 					<>
