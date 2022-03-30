@@ -14,6 +14,7 @@ import MerchPageMobile from "./componentsMobile/Merch/MerchPageMobile.js";
 import AboutPageMobile from "./componentsMobile/About/AboutPageMobile.js";
 import ContactPageMobile from "./componentsMobile/Contact/ContactPageMobile.js";
 import LandingScreenMobile from "./componentsMobile/Home/LandingScreenMobile.js";
+import ScrollToTop from "./ScrollToTop";
 
 const Router = ({ mobile }) => {
 	return (

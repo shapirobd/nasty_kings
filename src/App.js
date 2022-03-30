@@ -42,7 +42,7 @@ function App() {
 					<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 				)}
 				{width <= 599 ? (
-					<div className={classes.mainContainer}>
+					<div id="main-container" className={classes.mainContainer}>
 						<Router mobile={width <= 599} />
 						{width <= 599 ? <FooterMobile /> : <Footer />}
 					</div>
