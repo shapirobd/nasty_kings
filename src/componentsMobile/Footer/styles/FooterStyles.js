@@ -6,9 +6,10 @@ export const useStyles = makeStyles((theme) => ({
 		backgroundColor: "black",
 		// position: "absolute",
 		// bottom: "0%",
+		height: "10%",
 		display: "flex",
 		justifyContent: "center",
-		margin: "30px 0 30px",
+		margin: "8% 0",
 	},
 	innerDiv: {
 		width: "90%",

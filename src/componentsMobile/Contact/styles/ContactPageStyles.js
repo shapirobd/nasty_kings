@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		height: "77%",
+		height: "74%",
 		width: "100%",
 		// position: "absolute",
 		color: "white",
