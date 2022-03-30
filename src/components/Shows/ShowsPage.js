@@ -2,6 +2,7 @@ import React from "react";
 import { useStyles } from "./styles/ShowsPageStyles";
 import ShowItem from "./ShowItem";
 import { Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const ShowsPage = ({ fromHome = false }) => {
 	const classes = useStyles();
@@ -32,18 +33,29 @@ const ShowsPage = ({ fromHome = false }) => {
 
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
-			<div className={classes.innerDiv}>
-				<h2
-					// variant="h2"
-					// sx={{ color: "white", fontWeight: "bold" }}s
-					className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
-				>
-					Upcoming Shows
-				</h2>
-				{shows.map((show) => (
-					<ShowItem key={`${show.venue}__${show.date}`} show={show} />
-				))}
-			</div>
+			<Grid
+				container
+				direction="column"
+				alignItems="center"
+				justifyContent="center"
+				className={classes.innerDiv}
+				xs={12}
+				sm={10}
+				lg={8}
+			>
+				<Grid item>
+					<h2
+						// variant="h2"
+						// sx={{ color: "white", fontWeight: "bold" }}s
+						className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
+					>
+						Upcoming Shows
+					</h2>
+					{shows.map((show) => (
+						<ShowItem key={`${show.venue}__${show.date}`} show={show} />
+					))}
+				</Grid>
+			</Grid>
 		</div>
 	);
 };
