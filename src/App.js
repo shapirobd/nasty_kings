@@ -27,7 +27,11 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<div
 				className={width <= 599 ? classes.mobileApp : classes.app}
-				style={{ fontFamily: "Mukta", height: height }}
+				style={
+					width <= 599
+						? { fontFamily: "Mukta", height: height }
+						: { fontFamily: "Mukta" }
+				}
 			>
 				{width <= 599 ? (
 					<NavBarMobile
