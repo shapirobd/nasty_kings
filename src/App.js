@@ -21,11 +21,13 @@ function App() {
 	const [currentPage, setCurrentPage] = useState("");
 	const classes = useStyles();
 
+	const height = window.innerHeight;
+
 	return (
 		<ThemeProvider theme={theme}>
 			<div
 				className={width <= 599 ? classes.mobileApp : classes.app}
-				style={{ fontFamily: "Mukta" }}
+				style={{ fontFamily: "Mukta", height: height }}
 			>
 				{width <= 599 ? (
 					<NavBarMobile
