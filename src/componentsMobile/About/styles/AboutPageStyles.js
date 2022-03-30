@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	photoContainer: {
 		height: "100%",
-		width: "90%",
+		width: "100%",
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "flex-end",
@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	descriptionContainer: {
 		height: "100%",
-		width: "90%",
+		width: "98%",
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
