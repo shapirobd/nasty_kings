@@ -19,6 +19,7 @@ export const useStyles = makeStyles((theme) => ({
 		flexDirection: "column",
 		justifyContent: "space-between",
 		alignItems: "center",
+		marginBottom: "10%",
 	},
 	photoContainer: {
 		height: "100%",
@@ -29,6 +30,9 @@ export const useStyles = makeStyles((theme) => ({
 		paddingLeft: "0px !important",
 		paddingRight: "0px !important",
 		marginTop: "23%",
+	},
+	jacobPhotoContainer: {
+		backgroundImage: "",
 	},
 	photo: {
 		height: "auto",
