@@ -33,7 +33,7 @@ function App() {
 						: { fontFamily: "Mukta" }
 				}
 			>
-				{width <= 760 ? (
+				{width <= 1100 ? (
 					<NavBarMobile
 						currentPage={currentPage}
 						setCurrentPage={setCurrentPage}
