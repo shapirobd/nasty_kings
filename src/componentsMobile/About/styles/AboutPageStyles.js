@@ -32,7 +32,11 @@ export const useStyles = makeStyles((theme) => ({
 		marginTop: "23%",
 	},
 	jacobPhotoContainer: {
-		backgroundImage: "",
+		height: "100%",
+		width: "100%",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "flex-end",
 	},
 	photo: {
 		height: "auto",

@@ -39,11 +39,20 @@ const ShowsPage = ({ fromHome = false }) => {
 				alignItems="center"
 				justifyContent="center"
 				className={classes.innerDiv}
-				xs={12}
-				sm={10}
-				lg={8}
+				// xs={12}
+				// sm={10}
+				// lg={8}
 			>
-				<Grid item>
+				<Grid
+					item
+					style={{
+						width: "100%",
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+						justifyContent: "center",
+					}}
+				>
 					<h2
 						// variant="h2"
 						// sx={{ color: "white", fontWeight: "bold" }}s
