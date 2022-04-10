@@ -4,6 +4,7 @@ export const useStyles = makeStyles((theme) => ({
 	singlesHeader: {
 		color: "white",
 		fontWeight: "bold",
+		marginBottom: "30px",
 	},
 	albumsContainer: {
 		margin: "30px 0",

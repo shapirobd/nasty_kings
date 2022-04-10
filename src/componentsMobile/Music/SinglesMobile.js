@@ -4,7 +4,7 @@ import logo_bw from "../../images/logo_bw.png";
 import { useStyles } from "./styles/SinglesStyles";
 import SingleMobile from "./SingleMobile";
 
-const SinglesMobile = ({ singleList }) => {
+const SinglesMobile = ({ singleList, fromHome }) => {
 	const classes = useStyles();
 
 	return (
@@ -19,6 +19,8 @@ const SinglesMobile = ({ singleList }) => {
 						coverArt={s.coverArt}
 						name={s.name}
 						url={s.url}
+						fromHome={fromHome}
+						albumCode={s.albumCode}
 					/>
 				))}
 			</div>

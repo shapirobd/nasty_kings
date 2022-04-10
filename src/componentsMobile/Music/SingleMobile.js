@@ -1,9 +1,17 @@
 import React from "react";
 import { useStyles } from "./styles/SingleStyles";
+import SpotifyPlayer from "react-spotify-player";
 import { Typography } from "@material-ui/core";
 
-const SingleMobile = ({ coverArt, name, url }) => {
+const SingleMobile = ({ coverArt, name, url, fromHome, albumCode }) => {
 	const classes = useStyles();
+
+	const size = {
+		width: "100%",
+		height: 300,
+	};
+	const view = "list"; // 'list' or 'coverart'
+	const theme = "black"; // 'black' or 'white'
 
 	return (
 		<div>
@@ -13,6 +21,14 @@ const SingleMobile = ({ coverArt, name, url }) => {
 			<Typography variant="h5" className={classes.singleName}>
 				{name}
 			</Typography>
+			{!fromHome && (
+				<SpotifyPlayer
+					uri={"spotify:album:" + albumCode}
+					size={size}
+					view={view}
+					theme={theme}
+				/>
+			)}
 		</div>
 	);
 };
