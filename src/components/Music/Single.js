@@ -8,7 +8,7 @@ const Single = ({ coverArt, name, url, fromHome, albumCode }) => {
 
 	const size = {
 		width: "100%",
-		height: 300,
+		height: 200,
 	};
 	const view = "list"; // 'list' or 'coverart'
 	const theme = "black"; // 'black' or 'white'
