@@ -3,20 +3,25 @@ import { useStyles } from "./styles/SingleStyles";
 import { Typography, Grid } from "@material-ui/core";
 import SpotifyPlayer from "react-spotify-player";
 
-const Single = ({ coverArt, name, url, fromHome, albumCode }) => {
+const Single = ({ coverArt, name, url, fromHome, albumCode, colWidth }) => {
 	const classes = useStyles();
 
 	const size = {
-		width: "100%",
+		width: colWidth === 4 ? "100%" : "80%",
 		height: 200,
 	};
 	const view = "list"; // 'list' or 'coverart'
 	const theme = "black"; // 'black' or 'white'
 
 	return (
-		<Grid item xs={4}>
+		<Grid item xs={colWidth}>
 			<a href={url} style={{ width: "100%" }}>
-				<img src={coverArt} alt={coverArt} className={classes.albumCover} />
+				<img
+					src={coverArt}
+					alt={coverArt}
+					className={classes.albumCover}
+					style={{ width: colWidth === 4 ? "100%" : "80%" }}
+				/>
 			</a>
 			<Typography variant="h4" className={classes.singleName}>
 				{name}
