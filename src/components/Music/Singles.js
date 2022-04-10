@@ -6,6 +6,7 @@ import Single from "./Single";
 
 const Singles = ({ singleList, fromHome }) => {
 	const classes = useStyles();
+	const colWidth = singleList.length === 3 ? 4 : 6;
 
 	return (
 		<div
@@ -32,6 +33,7 @@ const Singles = ({ singleList, fromHome }) => {
 						url={s.url}
 						fromHome={fromHome}
 						albumCode={s.albumCode}
+						colWidth={colWidth}
 					/>
 				))}
 			</Grid>
