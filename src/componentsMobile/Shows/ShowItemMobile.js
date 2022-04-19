@@ -34,7 +34,8 @@ const ShowItemMobile = ({ show }) => {
 			<div className={classes.details}>
 				<div>
 					<div className={classes.fullDate}>
-						{show.date.month} {show.date.day}, {show.date.year} - {show.time}
+						{show.date.month} {show.date.day}, {show.date.year}{" "}
+						{show.time ? `- ${show.time}` : ""}
 					</div>
 					<div className={classes.venue}>{show.venue}</div>
 					<div className={classes.address}>

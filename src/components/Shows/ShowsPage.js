@@ -29,6 +29,14 @@ const ShowsPage = ({ fromHome = false }) => {
 			"https://highlandbrewing.com/",
 			"Free"
 		),
+		createData(
+			"Bullhorn Fest",
+			"Shadowbox Studio, 2200-D Dominion St. Durham, NC",
+			{ month: "September", day: "24", year: "2022", weekDay: "SATURDAY" },
+			"",
+			"https://bullhornarts.org/",
+			"Free"
+		),
 	];
 
 	return (
