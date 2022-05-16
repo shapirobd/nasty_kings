@@ -7,7 +7,8 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	card: {
 		maxWidth: "100% !important",
-		width: "100%",
+		width: "92%",
+		marginBottom: "10%",
 	},
 	content: {
 		backgroundColor: "#1e1e1e",
@@ -20,5 +21,9 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "right",
 		padding: "16px !important",
+	},
+	venmo_logo: {
+		width: "50px",
+		height: "50px",
 	},
 }));
