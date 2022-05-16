@@ -20,6 +20,12 @@ const MusicPage = ({ fromHome = false }) => {
 			url: "https://open.spotify.com/album/6SltSM8fHWM7IWOheDBC4M?highlight=spotify:track:3NMxc92cnDxLEBVrQQjmni",
 			albumCode: "6SltSM8fHWM7IWOheDBC4M",
 		},
+		{
+			name: "Trevor's Trip",
+			coverArt: logo_bw,
+			url: "https://open.spotify.com/album/5946VUwksxvnX7APfO4xKC?si=cg288Dj0SXmsr3vZvJJIzQ",
+			albumCode: "5946VUwksxvnX7APfO4xKC",
+		},
 	];
 
 	return (

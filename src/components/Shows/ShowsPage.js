@@ -37,6 +37,14 @@ const ShowsPage = ({ fromHome = false }) => {
 			"https://bullhornarts.org/",
 			"Free"
 		),
+		createData(
+			"Local 506",
+			"506 West Franklin Street Chapel Hill, NC 27516",
+			{ month: "June", day: "17", year: "2022", weekDay: "FRIDAY" },
+			"7:00 PM",
+			"https://local506.com/",
+			"Free"
+		),
 	];
 
 	return (

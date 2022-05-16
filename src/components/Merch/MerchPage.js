@@ -3,12 +3,14 @@ import { useStyles } from "./styles/MerchPageStyles";
 import { Grid, Paper, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MerchItem from "./MerchItem";
+import venmo_qr from '../../images/venmo_qr.png';
 
 const MerchPage = () => {
 	const classes = useStyles();
 
 	return (
 		<Box xs={{ flexGrow: 1 }} className={classes.main}>
+			<img className={classes.venmo_qr} src={venmo_qr} alt={venmo_qr} />
 			<Grid container spacing={2} className={classes.grid}>
 				<MerchItem
 					title="Test title 1"
