@@ -30,19 +30,19 @@ const ShowsPage = ({ fromHome = false }) => {
 			"Free"
 		),
 		createData(
-			"Bullhorn Fest",
-			"Shadowbox Studio, 2200-D Dominion St. Durham, NC",
-			{ month: "September", day: "24", year: "2022", weekDay: "SATURDAY" },
-			"",
-			"https://bullhornarts.org/",
-			"Free"
-		),
-		createData(
 			"Local 506",
 			"506 West Franklin Street Chapel Hill, NC 27516",
 			{ month: "June", day: "17", year: "2022", weekDay: "FRIDAY" },
 			"7:00 PM",
 			"https://local506.com/",
+			"Free"
+		),
+		createData(
+			"Bullhorn Fest",
+			"Shadowbox Studio, 2200-D Dominion St. Durham, NC",
+			{ month: "September", day: "24", year: "2022", weekDay: "SATURDAY" },
+			"",
+			"https://bullhornarts.org/",
 			"Free"
 		),
 	];
