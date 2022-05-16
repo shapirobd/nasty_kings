@@ -3,7 +3,7 @@ import { useStyles } from "./styles/SingleStyles";
 import { Typography, Grid } from "@material-ui/core";
 import SpotifyPlayer from "react-spotify-player";
 
-const Single = ({ coverArt, name, url, fromHome, albumCode, colWidth }) => {
+const Single = ({ coverArt, name, url, fromHome, code, colWidth }) => {
 	const classes = useStyles();
 
 	const size = {
@@ -28,7 +28,7 @@ const Single = ({ coverArt, name, url, fromHome, albumCode, colWidth }) => {
 			</Typography>
 			{!fromHome && (
 				<SpotifyPlayer
-					uri={"spotify:album:" + albumCode}
+					uri={"spotify:track:" + code}
 					size={size}
 					view={view}
 					theme={theme}

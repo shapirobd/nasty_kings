@@ -32,7 +32,7 @@ const Singles = ({ singleList, fromHome }) => {
 						name={s.name}
 						url={s.url}
 						fromHome={fromHome}
-						albumCode={s.albumCode}
+						code={s.code}
 						colWidth={colWidth}
 					/>
 				))}

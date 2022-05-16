@@ -20,7 +20,7 @@ const SinglesMobile = ({ singleList, fromHome }) => {
 						name={s.name}
 						url={s.url}
 						fromHome={fromHome}
-						albumCode={s.albumCode}
+						code={s.code}
 					/>
 				))}
 			</div>
