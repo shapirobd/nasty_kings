@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
 	main: {
 		// height: "77%",
-		maxHeight: "100%",
+		// maxHeight: "100%",
+		display: "flex",
+		flexDirection: "column",
 		// marginTop: "21%",
 		padding: "0 5%",
 		width: "90%",
