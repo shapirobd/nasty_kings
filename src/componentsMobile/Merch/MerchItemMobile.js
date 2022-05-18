@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
+import venmo_logo from "../../images/venmo_logo_50.png";
 
 const MerchItemMobile = ({ title, description, imgPath, altText, price }) => {
 	const classes = useStyles();
@@ -21,7 +23,7 @@ const MerchItemMobile = ({ title, description, imgPath, altText, price }) => {
 	library.add(faCartPlus);
 
 	return (
-		<Grid item xs={4} className={classes.main}>
+		<Grid item xs={12} className={classes.main}>
 			<Card variant="outlined" sx={{ maxWidth: 345 }} className={classes.card}>
 				<CardMedia
 					component="img"
@@ -41,15 +43,12 @@ const MerchItemMobile = ({ title, description, imgPath, altText, price }) => {
 					<Typography variant="body2">{description}</Typography>
 				</CardContent>
 				<CardActions className={classes.actions}>
-					<Link to="#" className={classes.addToCartButton}>
-						<FontAwesomeIcon
-							icon="fa-solid fa-cart-plus"
-							size="xl"
-							color={isHovered ? "#1BD760" : "white"}
-							onMouseEnter={() => setIsHovered(true)}
-							onMouseLeave={() => setIsHovered(false)}
-						/>
-					</Link>
+					<a
+						href="https://account.venmo.com/u/Greylanhallandthenastykings"
+						className={classes.addToCartButton}
+					>
+						<img src={venmo_logo} className={classes.venmo_logo} />
+					</a>
 				</CardActions>
 			</Card>
 		</Grid>

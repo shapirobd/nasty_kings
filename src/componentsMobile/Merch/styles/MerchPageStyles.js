@@ -2,13 +2,14 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	main: {
-		width: "100vw",
-		height: "max-content",
+		width: "100%",
+		// height: "max-content",
 		// minHeight: "100vh",
-		position: "absolute",
+		// position: "absolute",
 		paddingTop: "10%",
 		display: "flex",
-		alignItems: "center",
+		// alignItems: "center",
+		marginBottom: "5%",
 	},
 	grid: {
 		paddingLeft: "2%",
