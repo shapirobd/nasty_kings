@@ -64,34 +64,54 @@ const ShowsPage = ({ fromHome = false }) => {
 		'November', 
 		'December'
 	];
+const pmTimes = [
+		'12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'
+	]
 
 	useEffect(async () => {
 		const getShows = async () => {
 			const resp = await axios.get(
 				// "http://localhost:5000/shows?forSite=true"
-				"https://ghnk-crm-server.herokuapp.com/shows?forSite=true"
+				"http://ghnk-crm-server.herokuapp.com/shows?forSite=true"
 			);
 			console.log(resp.data);
 			const showsArr = [];
 			for (let show of resp.data) {
-				let date = new Date(show.date)
-				let weekDay = days[date.getDay()];
+				let date = new Date(show.date);
+				let weekDay = days[date.getDay() + 1];
 				let day = date.getDate();
 				let month = months[date.getMonth()];
 				let year = date.getFullYear();
-				// let time = show.time = '00:00:00' ? "" : "";
-				const fullDate = {
-							month,
-							day,
-							year,
-							weekDay,
+				let time = show.time ? show.time.slice(0, show.time.length - 3) : show.time;
+				if (time) {
+					if (pmTimes.includes(time.slice(0, 2))) {
+						time += " PM"
+						if (time.slice(0, 2) !== "12") {
+							let originalHour = time.slice(0, 2);
+							let newHour = parseInt(originalHour) - 12
+							time = newHour + time.substring(2)
 						}
+					} else {
+						time += " AM"
+						if (time.slice(0, 2) === "00") {
+							time = "12" + time.substring(2);
+						} else if (time.slice(0, 1) === "0") {
+							time = time.substring(1);
+						}
+					}
+				}
+				const fullDate = {
+					month,
+					day,
+					year,
+					weekDay,
+				};
 				showsArr.push(
 					createData(
 						show.venue,
 						show.address,
 						fullDate,
-						show.time,
+						time,
 						show.venueLink,
 						show.ticketLink,
 						show.solo

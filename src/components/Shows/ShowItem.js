@@ -13,7 +13,7 @@ const ShowItem = ({ show }) => {
 
 	return (
 		<div className={classes.show}>
-			{show.solo && (
+			{show.solo ? (
 				<div className={classes.soloShow}>
 					<div className={classes.soloShowLogo}>
 						<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
@@ -24,7 +24,7 @@ const ShowItem = ({ show }) => {
 						</b>
 					</div>
 				</div>
-			)}
+			) : null}
 			<div className={classes.date}>
 				<div className={classes.weekDay}>{show.date.weekDay}</div>
 				<div className={classes.day}>{show.date.day}</div>
