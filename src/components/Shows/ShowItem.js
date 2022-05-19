@@ -37,7 +37,7 @@ const ShowItem = ({ show }) => {
 					</div>
 					<div className={classes.venue}>{show.venue}</div>
 					<div className={classes.address}>
-						<i>{show.address}</i>
+						<i>{show.address + " " + show.city + ", " + show.state }</i>
 					</div>
 				</div>
 				<div>
