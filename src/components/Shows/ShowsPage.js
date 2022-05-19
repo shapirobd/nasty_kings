@@ -8,8 +8,8 @@ import axios from 'axios';
 const ShowsPage = ({ fromHome = false }) => {
 	const classes = useStyles();
 
-	function createData(venue, address, date, time, venueLink, ticketLink, solo) {
-		return { venue, address, date, time, venueLink, ticketLink, solo };
+	function createData(venue, address, city, state, date, time, venueLink, ticketLink, solo) {
+		return { venue, address, city, state, date, time, venueLink, ticketLink, solo };
 	}
 
 	// const shows = [
@@ -110,6 +110,8 @@ const pmTimes = [
 					createData(
 						show.venue,
 						show.address,
+						show.city,
+						show.state,
 						fullDate,
 						time,
 						show.venueLink,
