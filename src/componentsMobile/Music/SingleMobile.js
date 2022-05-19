@@ -3,7 +3,7 @@ import { useStyles } from "./styles/SingleStyles";
 import SpotifyPlayer from "react-spotify-player";
 import { Typography } from "@material-ui/core";
 
-const SingleMobile = ({ coverArt, name, url, fromHome, albumCode }) => {
+const SingleMobile = ({ coverArt, name, url, fromHome, code }) => {
 	const classes = useStyles();
 
 	const size = {
@@ -23,7 +23,7 @@ const SingleMobile = ({ coverArt, name, url, fromHome, albumCode }) => {
 			</Typography>
 			{!fromHome && (
 				<SpotifyPlayer
-					uri={"spotify:album:" + albumCode}
+					uri={"spotify:track:" + code}
 					size={size}
 					view={view}
 					theme={theme}

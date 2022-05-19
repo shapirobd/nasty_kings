@@ -18,7 +18,7 @@ const ShowItemMobile = ({ show }) => {
 					<div className={classes.weekDay}>{show.date.weekDay}</div>
 					<div className={classes.day}>{show.date.day}</div>
 				</div>
-				{show.solo && (
+				{show.solo ? (
 					<div className={classes.soloShow}>
 						<div className={classes.soloShowLogo}>
 							<b style={{ fontSize: "20px", margin: "0", lineHeight: "100%" }}>
@@ -29,7 +29,7 @@ const ShowItemMobile = ({ show }) => {
 							</b>
 						</div>
 					</div>
-				)}
+				) : null}
 			</div>
 			<div className={classes.details}>
 				<div>
