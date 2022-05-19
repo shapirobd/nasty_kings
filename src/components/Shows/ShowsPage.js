@@ -72,7 +72,7 @@ const pmTimes = [
 		const getShows = async () => {
 			const resp = await axios.get(
 				// "http://localhost:5000/shows?forSite=true"
-				"http://ghnk-crm-server.herokuapp.com/shows?forSite=true"
+				"https://ghnk-crm-server.herokuapp.com/shows?forSite=true"
 			);
 			console.log(resp.data);
 			const showsArr = [];
