@@ -97,7 +97,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 			const showsArr = [];
 			for (let show of resp.data) {
 				let date = new Date(show.date.replace(/-/g, "/").replace(/T.+/, ""));
-				let weekDay = days[date.getDay() + 1];
+				let weekDay = days[date.getDay()];
 				let day = date.getDate();
 				let month = months[date.getMonth()];
 				let year = date.getFullYear();
