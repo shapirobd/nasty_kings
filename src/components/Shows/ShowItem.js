@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-const ShowItem = ({ show }) => {
+const ShowItem = ({ show, width }) => {
 	const classes = useStyles();
 
 	library.add(faArrowUpRightFromSquare);
 
 	return (
-		<div className={classes.show}>
+		<div className={width === "lg" ? classes.showLg : classes.showMd}>
 			{show.solo ? (
 				<div className={classes.soloShow}>
 					<div className={classes.soloShowLogo}>
@@ -40,7 +40,7 @@ const ShowItem = ({ show }) => {
 						<i>{show.address + " " + show.city + ", " + show.state }</i>
 					</div>
 				</div>
-				<div>
+				<div className={classes.showLinks}>
 					<a
 						href={show.venueLink}
 						target="_blank"
@@ -52,6 +52,14 @@ const ShowItem = ({ show }) => {
 							icon="fa-solid fa-arrow-up-right-from-square"
 						/>
 					</a>
+					{show.ticketLink &&
+						<a href={show.ticketLink}
+						target="_blank"
+						className={classes.ticketBtn}
+						>
+							Buy Tickets
+						</a>
+					}
 				</div>
 			</div>
 		</div>

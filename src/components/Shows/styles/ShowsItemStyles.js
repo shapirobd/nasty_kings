@@ -1,12 +1,25 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-	show: {
+	showLg: {
 		backgroundColor: "white",
 		padding: "20px",
 		marginBottom: "50px",
 		height: "200px",
 		width: "55%",
+		boxShadow: "0 0 20px 1px rgb(0 0 0 / 10%)",
+		borderRadius: "10px",
+		display: "flex",
+		justifyContent: "left",
+		textAlign: "left",
+		position: "relative",
+	},
+	showMd: {
+		backgroundColor: "white",
+		padding: "20px",
+		marginBottom: "50px",
+		height: "200px",
+		width: "80%",
 		boxShadow: "0 0 20px 1px rgb(0 0 0 / 10%)",
 		borderRadius: "10px",
 		display: "flex",
@@ -79,5 +92,21 @@ export const useStyles = makeStyles((theme) => ({
 	newTabIcon: {
 		marginLeft: "8px",
 		height: "13px",
+	},
+	showLinks: {
+		display: "flex",
+		justifyContent: "space-between",
+		width: "100%",
+	},
+	ticketBtn: {
+		position: "absolute",
+		right: "22px",
+		bottom: "8%",
+		backgroundColor: "#DD0000",
+		textDecoration: "none",
+		padding: "6px 12px",
+		borderRadius: "5px",
+		color: "white",
+		fontWeight: "bold",
 	},
 }));

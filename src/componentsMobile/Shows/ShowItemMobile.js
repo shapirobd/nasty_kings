@@ -42,7 +42,7 @@ const ShowItemMobile = ({ show }) => {
 						<i>{show.address + " " + show.city + ", " + show.state}</i>
 					</div>
 				</div>
-				<div>
+				<div className={classes.showLinks}>
 					<a
 						href={show.venueLink}
 						target="_blank"
@@ -54,6 +54,15 @@ const ShowItemMobile = ({ show }) => {
 							icon="fa-solid fa-arrow-up-right-from-square"
 						/>
 					</a>
+					{show.ticketLink && (
+						<a
+							href={show.ticketLink}
+							target="_blank"
+							className={classes.ticketBtn}
+						>
+							Buy Tickets
+						</a>
+					)}
 				</div>
 			</div>
 		</div>
