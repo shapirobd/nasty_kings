@@ -100,7 +100,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	ticketBtn: {
 		position: "absolute",
-		right: "3%",
+		right: "22px",
 		bottom: "8%",
 		backgroundColor: "#DD0000",
 		textDecoration: "none",
