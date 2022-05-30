@@ -4,9 +4,17 @@ import ShowItem from "./ShowItem";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import axios from 'axios';
+import useWindowDimensions from "../../customHooks/getWindowDimensions";
 
 const ShowsPage = ({ fromHome = false }) => {
+	const { width } = useWindowDimensions();
 	const classes = useStyles();
+
+	let showWidth = "lg";
+
+	if (width < 1370) {
+		showWidth = "md"
+	}
 
 	function createData(venue, address, city, state, date, time, venueLink, ticketLink, solo) {
 		return { venue, address, city, state, date, time, venueLink, ticketLink, solo };
@@ -157,7 +165,7 @@ const pmTimes = [
 						Upcoming Shows
 					</h2>
 					{shows.map((show) => (
-						<ShowItem key={`${show.venue}__${show.date}`} show={show} />
+						<ShowItem key={`${show.venue}__${show.date}`} show={show} width={showWidth} />
 					))}
 				</Grid>
 			</Grid>

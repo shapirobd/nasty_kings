@@ -12,6 +12,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "left",
 		textAlign: "left",
+		position: "relative",
 	},
 	left: {
 		display: "flex",
@@ -60,7 +61,7 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "50px",
 	},
 	details: {
-		padding: "8px 20px",
+		padding: "8px 20px 20px 20px",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-between",
@@ -72,10 +73,13 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "20pt",
 		fontWeight: "bold",
 		lineHeight: "110%",
+		marginTop: "5px",
 	},
 	address: {
 		fontSize: "14pt",
 		lineHeight: "125%",
+		marginTop: "5px",
+		marginBottom: "10px",
 	},
 	venueLink: {
 		textDecoration: "none",
@@ -88,5 +92,22 @@ export const useStyles = makeStyles((theme) => ({
 	newTabIcon: {
 		marginLeft: "8px",
 		height: "13px",
+	},
+	showLinks: {
+		display: "flex",
+		justifyContent: "space-between",
+		width: "100%",
+		marginTop: "5px"
+	},
+	ticketBtn: {
+		position: "absolute",
+		right: "18px",
+		bottom: "10%",
+		backgroundColor: "#DD0000",
+		textDecoration: "none",
+		padding: "6px 12px",
+		borderRadius: "5px",
+		color: "white",
+		fontWeight: "bold",
 	},
 }));
