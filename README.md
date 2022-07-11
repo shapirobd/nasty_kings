@@ -1,4 +1,4 @@
-# LINK TO SITE:
+# LINK TO SITE
 
 https://greylanhallandthenastykings.com/
 
