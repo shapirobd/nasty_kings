@@ -47,7 +47,8 @@ const pmTimes = [
 ];
 
 function formatShows(showList, showsArr, createData, prevShows = false) {
-	for (let show of showList.data) {
+	console.log(showList)
+	for (let show of showList) {
 		let date = new Date(show.date.replace(/-/g, "/").replace(/T.+/, ""));
 		let weekDay = days[date.getDay()];
 		let day = date.getDate();

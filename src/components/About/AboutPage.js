@@ -68,6 +68,31 @@ const AboutPage = () => {
 						/>
 					</Grid>
 				</Grid>
+				<Grid container className={classes.greysSection}>
+					<Grid item xs={12} lg={5} className={classes.photoContainer}>
+						{/* <img src={greysPhoto} className={classes.photo} /> */}
+					</Grid>
+					<Grid
+						item
+						xl={6}
+						lg={5}
+						xs={12}
+						className={classes.descriptionContainer}
+					>
+						<Typography className={classes.description}>
+							Ethan Prindle (Little Onion Boy) has been playing the drums since
+							the age of 13, inspired by drummers such as John Bonham, Mitch
+							Mitchell, and Phil Selway. He would go on to learn and appreciate
+							various genres of music in addition to rock, such as funk, blues,
+							jazz, and hip-hop. Ethan studied Jazz Performance for a few
+							semesters at North Carolina Central University, ultimately
+							receiving a degree in Music Education. When he isn’t holding down
+							the drumset, Ethan can be found raising the next generation of
+							musicians in the elementary school classroom. Little Onion Boy
+							loves YOU!
+						</Typography>
+					</Grid>
+				</Grid>
 			</div>
 		</Box>
 	);
