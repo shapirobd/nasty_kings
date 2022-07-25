@@ -106,7 +106,8 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 		time,
 		venueLink,
 		ticketLink,
-		solo
+		solo,
+		prevShow
 	) {
 		return {
 			venue,
@@ -118,6 +119,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 			venueLink,
 			ticketLink,
 			solo,
+			prevShow
 		};
 	}
 
