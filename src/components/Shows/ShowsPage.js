@@ -189,7 +189,7 @@ const ShowsPage = ({ fromHome = false }) => {
 						Upcoming Shows
 					</h2>
 					{shows.map((show) => (
-						!show.prevShow && <ShowItem key={`${show.venue}__${show.date}`} show={show} width={showWidth} />
+						!show.prevShow && <ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} />
 					))}
 				</Grid>
 				<Grid
@@ -210,7 +210,7 @@ const ShowsPage = ({ fromHome = false }) => {
 						Previous Shows
 					</h2>
 					{shows.map((show) => (
-						show.prevShow && <ShowItem key={`${show.venue}__${show.date}`} show={show} width={showWidth} />
+						show.prevShow && <ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} />
 					))}
 				</Grid>
 			</Grid>

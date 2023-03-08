@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AppBar, Toolbar } from "@material-ui/core";
-import logo from "../../images/logo_svg_3.png";
+import logo from "../../images/ghnk_logo_new_invert_cutout.png";
 import { useStyles } from "./styles/NavBarStyles";
 import NavOption from "./NavOption";
 // import { Facebook, Instagram, YouTube } from "@mui/icons-material";

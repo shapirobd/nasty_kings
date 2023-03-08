@@ -1,7 +1,7 @@
 import React from "react";
 import { useStyles } from "./styles/LandingScreenStyles";
 import logo from "../../images/logo_vector.png";
-import logo_svg_3 from "../../images/logo_svg_3.png";
+import logo_svg_3 from "../../images/ghnk_logo_new.png";
 
 const LandingScreenMobile = () => {
 	const classes = useStyles();

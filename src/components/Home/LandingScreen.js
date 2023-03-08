@@ -1,7 +1,7 @@
 import React from "react";
 import { useStyles } from "./styles/LandingScreenStyles";
 import logo from "../../images/logo_vector.png";
-import BandPic from "../../images/BandPic_4.png";
+import BandPic from "../../images/ghnk_logo_new.png";
 
 const LandingScreen = () => {
 	const classes = useStyles();

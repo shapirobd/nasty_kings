@@ -182,7 +182,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 				{shows.map(
 					(show) =>
 						!show.prevShow && (
-							<ShowItemMobile key={`${show.venue}__${show.date}`} show={show} />
+							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} />
 						)
 				)}
 				<h4
@@ -195,7 +195,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 				{shows.map(
 					(show) =>
 						show.prevShow && (
-							<ShowItemMobile key={`${show.venue}__${show.date}`} show={show} />
+							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} />
 						)
 				)}
 			</div>

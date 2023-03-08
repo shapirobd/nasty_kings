@@ -29,11 +29,14 @@ export const useStyles = makeStyles((theme) => ({
 		height: "50px",
 		margin: "4px 0 0 0",
 		padding: "4px",
+		transitionDuration: ".1s",
 		// borderRadius: "50%",
-		filter:
-			"invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%)",
+		// filter:
+		// 	"invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%)",
 		"&:hover": {
-			filter: "none",
+			// filter: "none",
+			"-webkit-filter": "invert(100%) !important",
+			transitionDuration: ".1s"
 		},
 	},
 	navOptions: {

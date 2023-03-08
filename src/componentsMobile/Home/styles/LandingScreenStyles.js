@@ -15,6 +15,6 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	logo: {
 		width: "100%",
-		// borderRadius: "50%",
+		borderRadius: "50%",
 	},
 }));
