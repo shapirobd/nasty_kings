@@ -52,7 +52,7 @@ const ShowItem = ({ show, width }) => {
 							icon="fa-solid fa-arrow-up-right-from-square"
 						/>
 					</a>
-					{show.ticketLink &&
+					{show.ticketLink && !show.prevShow && 
 						<a href={show.ticketLink}
 						target="_blank"
 						className={classes.ticketBtn}

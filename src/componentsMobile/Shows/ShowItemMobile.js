@@ -54,7 +54,7 @@ const ShowItemMobile = ({ show }) => {
 							icon="fa-solid fa-arrow-up-right-from-square"
 						/>
 					</a>
-					{show.ticketLink && (
+					{show.ticketLink && !show.prevshow && (
 						<a
 							href={show.ticketLink}
 							target="_blank"
