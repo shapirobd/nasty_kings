@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { Typography, Grid } from "@material-ui/core";
 import logo_bw from "../../images/logo_bw.png";
-import { useStyles } from "./styles/SinglesStyles";
-import Single from "./Single";
-import axios from 'axios';
+import { useStyles } from "./styles/AlbumsStyles";
+import Album from "./Album";
+import axios from "axios";
 
-const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoaded, fromHome }) => {
+const Albums = ({ albumList, setAlbumList, albumArtLoaded, setAlbumArtLoaded, fromHome }) => {
 	const classes = useStyles();
-	const colWidth = singleList.length === 3 ? 4 : 6;
+	const colWidth = albumList.length === 3 ? 4 : 6;
 
 	useEffect(async () => {
-		const getSingleImages = async () => {
+		const getAlbumImages = async () => {
 			const token_resp = await axios.post(
 				"https://accounts.spotify.com/api/token",
 				"grant_type=client_credentials&client_id=353683482dae4cb5b5a45f8145e0a0ec&client_secret=8539cea0e9c14f689bd79fb83502e79c",
@@ -22,11 +22,11 @@ const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoade
 			);
 			let spotify_access_token = token_resp.data.access_token;
 			console.log("spotify_access_token = " + spotify_access_token);
-			const singleListCopy = [...singleList];
-			for (let single of singleListCopy) {
+			const albumListCopy = [...albumList];
+			for (let album of albumListCopy) {
 				const resp = await axios.get(
-					"https://api.spotify.com/v1/tracks/" +
-						single.code.replace("?", "?").replace("&", "&"),
+					"https://api.spotify.com/v1/albums/" +
+						album.code.replace("?", "?").replace("&", "&"),
 					{
 						headers: {
 							"Content-Type": "application/json",
@@ -37,19 +37,18 @@ const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoade
 				if (resp.data) {
 					if (resp.data.images) {
 						if (resp.data.images.length) {
-							single.coverArt = resp.data.images[0].url;
+							album.coverArt = resp.data.images[0].url;
 						}
 					}
 				}
 			}
-			setSingleList(singleListCopy);
-			setSingleArtLoaded(true);
-			console.log("coverartloaded = true");
+			setAlbumList(albumListCopy);
+			setAlbumArtLoaded(true);
 		};
-		if (!singleArtLoaded) {
-			getSingleImages();
+		if (!albumArtLoaded) {
+			getAlbumImages();
 		}
-	}, [singleArtLoaded]);
+	}, [albumArtLoaded]);
 
 	return (
 		<div
@@ -62,14 +61,14 @@ const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoade
 		>
 			<Typography
 				variant="h2"
-				className={classes.singlesHeader}
+				className={classes.albumsHeader}
 				// sx={{ fontWeight: "bold" }}
 			>
-				Latest Singles
+				Latest Albums
 			</Typography>
 			<Grid container spacing={5} className={classes.albumsContainer}>
-				{singleList.map((s) => (
-					<Single
+				{albumList.map((s) => (
+					<Album
 						key={s.name}
 						coverArt={s.coverArt}
 						name={s.name}
@@ -84,4 +83,4 @@ const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoade
 	);
 };
 
-export default Singles;
+export default Albums;

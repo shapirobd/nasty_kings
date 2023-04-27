@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useStyles } from "./styles/MusicPageStyles";
 import logo_bw from "../../images/logo_bw.png";
 import SinglesMobile from "./SinglesMobile";
+import AlbumsMobile from "./AlbumsMobile";
 import axios from "axios";
 
 const MusicPageMobile = ({ fromHome = false }) => {
@@ -15,6 +16,9 @@ const MusicPageMobile = ({ fromHome = false }) => {
 	const theme = "black"; // 'black' or 'white'
 
 	const [singleList, setSingleList] = useState([]);
+	const [albumList, setAlbumList] = useState([]);
+	const [singleArtLoaded, setSingleArtLoaded] = useState(false);
+	const [albumArtLoaded, setAlbumArtLoaded] = useState(false);
 	useEffect(async () => {
 		const getSingles = async () => {
 			const resp = await axios.get(
@@ -33,8 +37,27 @@ const MusicPageMobile = ({ fromHome = false }) => {
 			}
 			return singles;
 		};
+		const getAlbums = async () => {
+			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/albums");
+			console.log(resp.data)
+			const albums = [];
+			for (let album of resp.data) {
+				albums.push({
+					name: album.name,
+					url: album.url,
+					coverArt: logo_bw,
+					code: album.code,
+				});
+				console.log(albums);
+			}
+			return albums;
+		}
 		const singles = await getSingles();
+		const albums = await getAlbums();
 		setSingleList(singles);
+		setAlbumList(albums);
+		setSingleArtLoaded(false);
+		setAlbumArtLoaded(false);
 	}, []);
 
 	// const singleList = [
@@ -55,7 +78,18 @@ const MusicPageMobile = ({ fromHome = false }) => {
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
-				<SinglesMobile singleList={singleList} />
+				<AlbumsMobile
+					albumList={albumList}
+					setAlbumList={setAlbumList}
+					albumArtLoaded={albumArtLoaded}
+					setAlbumArtLoaded={setAlbumArtLoaded}
+				/>
+				<SinglesMobile
+					singleList={singleList}
+					setSingleList={setSingleList}
+					singleArtLoaded={singleArtLoaded}
+					setSingleArtLoaded={setSingleArtLoaded}
+				/>
 			</div>
 		</div>
 	);
