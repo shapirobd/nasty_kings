@@ -8,5 +8,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	albumsContainer: {
 		margin: "30px 0 40px",
+		display: "flex",
+		justifyContent: "center",
 	},
 }));
