@@ -90,7 +90,7 @@ function formatShows(showList, showsArr, createData, prevShows = false) {
 				prevShows
 			)
 		);
-		console.log(showsArr);
+		// console.log(showsArr);
 	}
 }
 

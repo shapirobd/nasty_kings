@@ -40,7 +40,7 @@ const Footer = () => {
 					/>
 				</div>
 				<Typography sx={{ color: "white" }} variant="caption">
-					© 2022, Greylan Hall and The Nasty Kings
+					© 2023, Greylan Hall and The Nasty Kings
 				</Typography>
 			</div>
 		</div>

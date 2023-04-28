@@ -8,14 +8,14 @@ const Single = ({ coverArt, name, url, fromHome, code, colWidth }) => {
 
 	const size = {
 		width: colWidth === 4 ? "100%" : "80%",
-		height: 200,
+		height: 300,
 	};
 	const view = "list"; // 'list' or 'coverart'
 	const theme = "black"; // 'black' or 'white'
 
 	return (
 		<Grid item xs={colWidth}>
-			<a href={url} style={{ width: "100%" }}>
+			{coverArt && <><a href={url} style={{ width: "100%" }}>
 				<img
 					src={coverArt}
 					alt={coverArt}
@@ -25,7 +25,7 @@ const Single = ({ coverArt, name, url, fromHome, code, colWidth }) => {
 			</a>
 			<Typography variant="h4" className={classes.singleName}>
 				{name}
-			</Typography>
+			</Typography></>}
 			{!fromHome && (
 				<SpotifyPlayer
 					uri={"spotify:track:" + code}

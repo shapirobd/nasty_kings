@@ -1,23 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useStyles } from "./styles/AlbumStyles";
 import { Typography, Grid } from "@material-ui/core";
 import SpotifyPlayer from "react-spotify-player";
-import axios from 'axios';
 
 const Album = ({ coverArt, name, url, fromHome, code, colWidth }) => {
-	console.log("coverArt = ", coverArt)
 	const classes = useStyles();
 
 	const size = {
 		width: colWidth === 4 ? "100%" : "80%",
-		height: 200,
+		height: 450,
 	};
 	const view = "list"; // 'list' or 'coverart'
 	const theme = "black"; // 'black' or 'white'
 
 	return (
 		<Grid item xs={colWidth}>
-			<a href={url} style={{ width: "100%" }}>
+			{coverArt && <><a href={url} style={{ width: "100%" }}>
 				<img
 					src={coverArt}
 					alt={coverArt}
@@ -27,7 +25,7 @@ const Album = ({ coverArt, name, url, fromHome, code, colWidth }) => {
 			</a>
 			<Typography variant="h4" className={classes.albumName}>
 				{name}
-			</Typography>
+			</Typography></>}
 			{!fromHome && (
 				<SpotifyPlayer
 					uri={"spotify:album:" + code}

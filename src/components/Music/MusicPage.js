@@ -12,31 +12,29 @@ const MusicPage = ({ fromHome = false }) => {
 	const [albumList, setAlbumList] = useState([]);
 	const [singleArtLoaded, setSingleArtLoaded] = useState(false);
 	const [albumArtLoaded, setAlbumArtLoaded] = useState(false);
+
 	useEffect(async () => {
 		const getSingles = async () => {
 			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/singles");
-			console.log(resp.data)
 			const singles = [];
 			for (let single of resp.data) {
 				singles.push({
 					name: single.name,
 					url: single.url,
-					coverArt: logo_bw,
+					coverArt: "",
 					code: single.code,
 				});
-				console.log(singles)
 			}
 			return singles;
 		}
 		const getAlbums = async () => {
 			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/albums");
-			console.log(resp.data)
 			const albums = [];
 			for (let album of resp.data) {
 				albums.push({
 					name: album.name,
 					url: album.url,
-					coverArt: logo_bw,
+					coverArt: "",
 					code: album.code,
 				});
 				console.log(albums);
@@ -50,27 +48,6 @@ const MusicPage = ({ fromHome = false }) => {
 		setSingleArtLoaded(false)
 		setAlbumArtLoaded(false)
 	}, [])
-
-	// const singleList = [
-	// 	{
-	// 		name: "Empty Man",
-	// 		coverArt: logo_bw,
-	// 		url: "https://open.spotify.com/track/5ZKrkEKFO2RSLQ0m8jVkpZ?si=a6bfba3e14074742&nd=1",
-	// 		albumCode: "5ZKrkEKFO2RSLQ0m8jVkpZ",
-	// 	},
-	// 	{
-	// 		name: "Little Onion Boy",
-	// 		coverArt: logo_bw,
-	// 		url: "https://open.spotify.com/track/3NMxc92cnDxLEBVrQQjmni?si=11964bbd08c141e4",
-	// 		albumCode: "3NMxc92cnDxLEBVrQQjmni",
-	// 	},
-	// 	{
-	// 		name: "TEST",
-	// 		coverArt: logo_bw,
-	// 		url: "https://open.spotify.com/track/5ZKrkEKFO2RSLQ0m8jVkpZ?si=a6bfba3e14074742&nd=1",
-	// 		albumCode: "5ZKrkEKFO2RSLQ0m8jVkpZ",
-	// 	},
-	// ];
 
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>

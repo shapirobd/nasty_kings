@@ -4,10 +4,10 @@ export const useStyles = makeStyles((theme) => ({
 	albumsHeader: {
 		color: "white",
 		fontWeight: "bold",
-		marginBottom: "30px",
+		// marginBottom: "30px",
 	},
 	albumsContainer: {
-		margin: "30px 0 40px",
+		margin: "30px 0 60px",
 		display: "flex",
 		justifyContent: "center",
 	},

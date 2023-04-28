@@ -8,19 +8,19 @@ const AlbumMobile = ({ coverArt, name, url, fromHome, code }) => {
 
 	const size = {
 		width: "100%",
-		height: 200,
+		height: 450,
 	};
 	const view = "list"; // 'list' or 'coverart'
 	const theme = "black"; // 'black' or 'white'
 
 	return (
 		<div>
-			<a href={url}>
+			{coverArt && <><a href={url}>
 				<img src={coverArt} alt={coverArt} className={classes.albumCover} />
 			</a>
 			<Typography variant="h5" className={classes.albumName}>
 				{name}
-			</Typography>
+			</Typography></>}
 			{!fromHome && (
 				<SpotifyPlayer
 					uri={"spotify:album:" + code}

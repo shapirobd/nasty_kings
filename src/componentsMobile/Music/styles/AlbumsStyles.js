@@ -7,6 +7,6 @@ export const useStyles = makeStyles((theme) => ({
 		marginBottom: "30px",
 	},
 	albumsContainer: {
-		margin: "30px 0",
+		margin: "30px 0 60px",
 	},
 }));

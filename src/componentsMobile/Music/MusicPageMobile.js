@@ -8,13 +8,6 @@ import axios from "axios";
 const MusicPageMobile = ({ fromHome = false }) => {
 	const classes = useStyles();
 
-	const size = {
-		width: "100%",
-		height: 300,
-	};
-	const view = "list"; // 'list' or 'coverart'
-	const theme = "black"; // 'black' or 'white'
-
 	const [singleList, setSingleList] = useState([]);
 	const [albumList, setAlbumList] = useState([]);
 	const [singleArtLoaded, setSingleArtLoaded] = useState(false);
@@ -24,31 +17,27 @@ const MusicPageMobile = ({ fromHome = false }) => {
 			const resp = await axios.get(
 				"https://ghnk-crm-server.herokuapp.com/singles"
 			);
-			console.log(resp.data);
 			const singles = [];
 			for (let single of resp.data) {
 				singles.push({
 					name: single.name,
 					url: single.url,
-					coverArt: logo_bw,
+					coverArt: "",
 					code: single.code,
 				});
-				console.log(singles);
 			}
 			return singles;
 		};
 		const getAlbums = async () => {
 			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/albums");
-			console.log(resp.data)
 			const albums = [];
 			for (let album of resp.data) {
 				albums.push({
 					name: album.name,
 					url: album.url,
-					coverArt: logo_bw,
+					coverArt: "",
 					code: album.code,
 				});
-				console.log(albums);
 			}
 			return albums;
 		}
@@ -59,21 +48,6 @@ const MusicPageMobile = ({ fromHome = false }) => {
 		setSingleArtLoaded(false);
 		setAlbumArtLoaded(false);
 	}, []);
-
-	// const singleList = [
-	// 	{
-	// 		name: "Empty Man",
-	// 		coverArt: logo_bw,
-	// 		url: "https://open.spotify.com/album/4hVuMLc8qmcagx3qOjIAFb?highlight=spotify:track:5ZKrkEKFO2RSLQ0m8jVkpZ",
-	// 		albumCode: "4hVuMLc8qmcagx3qOjIAFb",
-	// 	},
-	// 	{
-	// 		name: "Little Onion Boy",
-	// 		coverArt: logo_bw,
-	// 		url: "https://open.spotify.com/album/6SltSM8fHWM7IWOheDBC4M?highlight=spotify:track:3NMxc92cnDxLEBVrQQjmni",
-	// 		albumCode: "6SltSM8fHWM7IWOheDBC4M",
-	// 	},
-	// ];
 
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
