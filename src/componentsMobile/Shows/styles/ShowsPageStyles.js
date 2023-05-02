@@ -42,4 +42,7 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "2.125rem",
 		marginBottom: "30px",
 	},
+	prevShowsHeader: {
+		marginTop: "80px"
+	}
 }));

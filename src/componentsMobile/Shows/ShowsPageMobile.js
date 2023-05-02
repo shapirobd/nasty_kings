@@ -151,24 +151,24 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 				>
 					Upcoming Shows
 				</h4>
-				{shows.map(
-					(show) =>
-						!show.prevShow && (
-							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} />
-						)
+				{shows.filter(x => !x.prevShow).map(
+					(show, idx, arr) =>
+						// !show.prevShow && (
+							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} final={idx == arr.length - 1} />
+						// )
 				)}
 				<h4
 					// variant="h4"
 					// sx={{ color: "white", fontWeight: "bold" }}
-					className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
+					className={`${fromHome ? classes.homeShowsHeader : classes.showsHeader} ${classes.prevShowsHeader}`}
 				>
 					Previous Shows
 				</h4>
-				{shows.map(
-					(show) =>
-						show.prevShow && (
-							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} />
-						)
+				{shows.filter(x => x.prevShow).map(
+					(show, idx, arr) =>
+						// show.prevShow && (
+							<ShowItemMobile key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} final={idx == arr.length - 1} />
+						// )
 				)}
 			</div>
 		</div>

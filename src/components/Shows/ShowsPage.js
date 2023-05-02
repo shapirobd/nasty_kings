@@ -160,9 +160,12 @@ const ShowsPage = ({ fromHome = false }) => {
 					>
 						Upcoming Shows
 					</h2>
-					{shows.map((show) => (
-						!show.prevShow && <ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} />
-					))}
+					{shows.filter(x => !x.prevShow).map(
+						(show, idx, arr) =>
+						// !show.prevShow && (
+							<ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} final={idx == arr.length - 1} />
+						// )
+					)}
 				</Grid>
 				<Grid
 					item
@@ -177,13 +180,16 @@ const ShowsPage = ({ fromHome = false }) => {
 					<h2
 						// variant="h2"
 						// sx={{ color: "white", fontWeight: "bold" }}s
-						className={fromHome ? classes.homeShowsHeader : classes.showsHeader}
+						className={`${fromHome ? classes.homeShowsHeader : classes.showsHeader} ${classes.prevShowsHeader}`}
 					>
 						Previous Shows
 					</h2>
-					{shows.map((show) => (
-						show.prevShow && <ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} />
-					))}
+					{shows.filter(x => x.prevShow).map(
+						(show, idx, arr) =>
+							// show.prevShow && (
+								<ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} final={idx == arr.length - 1} />
+							// )
+					)}
 				</Grid>
 			</Grid>
 		</div>
