@@ -154,6 +154,10 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "30pt",
 		fontWeight: "bold",
 	},
+	venue: {
+		fontSize: "24pt",
+		fontWeight: "bold",
+	},
 	address: {
 		fontSize: "14pt",
 	},

@@ -113,6 +113,12 @@ export const useStyles = makeStyles((theme) => ({
 		lineHeight: "110%",
 		marginTop: "5px",
 	},
+	venue: {
+		fontSize: "16pt",
+		// fontWeight: "bold",
+		lineHeight: "110%",
+		marginTop: "5px",
+	},
 	address: {
 		fontSize: "12pt",
 		lineHeight: "125%",

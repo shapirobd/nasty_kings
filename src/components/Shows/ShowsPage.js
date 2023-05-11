@@ -84,6 +84,7 @@ function formatShows(showList, showsArr, createData, prevShows = false) {
 		showsArr.push(
 			createData(
 				show.venue,
+				show.other_artists,
 				show.address,
 				show.city,
 				show.state,
@@ -109,8 +110,8 @@ const ShowsPage = ({ fromHome = false }) => {
 		showWidth = "md"
 	}
 
-	function createData(venue, address, city, state, date, time, venueLink, ticketLink, solo, prevShow) {
-		return { venue, address, city, state, date, time, venueLink, ticketLink, solo, prevShow };
+	function createData(venue, other_artists, address, city, state, date, time, venueLink, ticketLink, solo, prevShow) {
+		return { venue, other_artists, address, city, state, date, time, venueLink, ticketLink, solo, prevShow };
 	}
 
 	const [shows, setShows] = useState([]);

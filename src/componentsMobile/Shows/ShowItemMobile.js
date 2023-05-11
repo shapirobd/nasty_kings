@@ -38,6 +38,7 @@ const ShowItemMobile = ({ show, final }) => {
 						{show.time ? `- ${show.time}` : ""}
 					</div>
 					<div className={classes.venue}>{show.venue}</div>
+					<div className={classes.other_artists}>{show.other_artists}</div>
 					<div className={classes.address}>
 						<i>{show.address + " " + show.city + ", " + show.state}</i>
 					</div>

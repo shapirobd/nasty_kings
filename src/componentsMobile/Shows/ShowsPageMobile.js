@@ -79,6 +79,7 @@ function formatShows(showList, showsArr, createData, prevShows = false) {
 		showsArr.push(
 			createData(
 				show.venue,
+				show.other_artists,
 				show.address,
 				show.city,
 				show.state,
@@ -99,6 +100,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 
 	function createData(
 		venue,
+		other_artists,
 		address,
 		city,
 		state,
@@ -111,6 +113,7 @@ const ShowsPageMobile = ({ fromHome = false }) => {
 	) {
 		return {
 			venue,
+			other_artists,
 			address,
 			city,
 			state,
