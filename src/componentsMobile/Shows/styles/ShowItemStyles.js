@@ -118,6 +118,7 @@ export const useStyles = makeStyles((theme) => ({
 		// fontWeight: "bold",
 		lineHeight: "110%",
 		marginTop: "5px",
+		marginBottom: "15px"
 	},
 	address: {
 		fontSize: "12pt",

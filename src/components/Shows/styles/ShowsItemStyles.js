@@ -155,8 +155,8 @@ export const useStyles = makeStyles((theme) => ({
 		fontWeight: "bold",
 	},
 	other_artists: {
-		fontSize: "24pt",
-		fontWeight: "bold",
+		fontSize: "14pt",
+		// fontWeight: "bold",
 	},
 	address: {
 		fontSize: "14pt",
