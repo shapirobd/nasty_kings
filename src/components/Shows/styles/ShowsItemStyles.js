@@ -154,7 +154,7 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "30pt",
 		fontWeight: "bold",
 	},
-	venue: {
+	other_artists: {
 		fontSize: "24pt",
 		fontWeight: "bold",
 	},

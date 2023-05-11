@@ -113,7 +113,7 @@ export const useStyles = makeStyles((theme) => ({
 		lineHeight: "110%",
 		marginTop: "5px",
 	},
-	venue: {
+	other_artists: {
 		fontSize: "16pt",
 		// fontWeight: "bold",
 		lineHeight: "110%",
