@@ -43,7 +43,7 @@ const ShowItem = ({ show, width, final }) => {
 					<div className={classes.address}>
 						<i>{show.address + " " + show.city + ", " + show.state }</i>
 					</div>
-					<div className={classes.other_artists}>{show.other_artists}</div>
+					{show.other_artists && <div className={classes.other_artists}>{show.other_artists}</div>}
 				</div>
 				<div className={classes.showLinks}>
 					{/* <a
