@@ -61,7 +61,7 @@ export const useStyles = makeStyles((theme) => ({
 		// color: "white",
 	},
 	soloAlert: {
-		width: "40%",
+		width: "100px",
 		display: "flex",
 		justifyContent: "center",
 		marginBottom: "10px",
