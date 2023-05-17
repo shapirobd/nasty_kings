@@ -23,6 +23,15 @@ export const useStyles = makeStyles((theme) => ({
 		alignItems: "center",
 		marginBottom: "10%",
 	},
+	ethansSection: {
+		height: "84vh",
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "space-between",
+		alignItems: "center",
+		marginBottom: "10%",
+	},
 	jacobsSection: {
 		height: "84vh",
 		width: "100%",
@@ -42,6 +51,16 @@ export const useStyles = makeStyles((theme) => ({
 		paddingRight: "0px !important",
 		marginTop: "23%",
 	},
+	ethansPhotoContainer: {
+		height: "100%",
+		width: "90%",
+		display: "flex",
+		// justifyContent: "center",
+		alignItems: "center",
+		paddingLeft: "0px !important",
+		paddingRight: "0px !important",
+		// marginTop: "23%",
+	},
 	jacobPhotoContainer: {
 		height: "100%",
 		width: "90%",
@@ -53,6 +72,10 @@ export const useStyles = makeStyles((theme) => ({
 		height: "100%",
 		width: "auto",
 	},
+	ethansPhoto: {
+		height: "auto",
+		width: "100%",
+	},
 	descriptionContainer: {
 		width: "90%",
 		display: "flex",
@@ -61,6 +84,15 @@ export const useStyles = makeStyles((theme) => ({
 		textAlign: "justify",
 		marginTop: "5%",
 		padding: "5% 7% 10% 0",
+	},
+	ethansDescriptionContainer: {
+		width: "90%",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
+		textAlign: "justify",
+		// marginTop: "5%",
+		padding: "0 7% 0 0",
 	},
 	jacobsDescriptionContainer: {
 		width: "90%",

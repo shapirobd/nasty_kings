@@ -38,6 +38,13 @@ export const useStyles = makeStyles((theme) => ({
 		justifyContent: "center",
 		alignItems: "flex-end",
 	},
+	ethansPhotoContainer: {
+		height: "100%",
+		width: "100%",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "flex-end",
+	},
 	photo: {
 		height: "auto",
 		width: "100%",

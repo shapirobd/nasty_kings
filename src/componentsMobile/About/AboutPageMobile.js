@@ -3,6 +3,7 @@ import { useStyles } from "./styles/AboutPageStyles";
 import { Box, Grid } from "@mui/material";
 import greysPhoto from "../../images/grey_hall.jpeg";
 import jacobsPhoto from "../../images/jacob_seyle.jpeg";
+import ethansPhoto from "../../images/ethan_prindle.png";
 import { Typography } from "@material-ui/core";
 
 const AboutPageMobile = () => {
@@ -49,6 +50,25 @@ const AboutPageMobile = () => {
 							from years past. Cutting his teeth with some of the best, Jacob
 							has shared the stage with Marcus King, Jeff Sipe, Justin Stanton,
 							Ike Stubblefield, Yonrico Scott, Cedric Burnside, and more.
+						</Typography>
+					</div>
+				</div>
+				<div className={classes.greysSection}>
+					<div className={classes.ethansPhotoContainer}>
+						<img src={ethansPhoto} className={classes.photo} />
+					</div>
+					<div className={classes.descriptionContainer}>
+						<Typography className={classes.description}>
+							Ethan Prindle (Little Onion Boy) has been playing the drums since
+							the age of 13, inspired by drummers such as John Bonham, Mitch
+							Mitchell, and Phil Selway. He would go on to learn and appreciate
+							various genres of music in addition to rock, such as funk, blues,
+							jazz, and hip-hop. Ethan studied Jazz Performance for a few
+							semesters at North Carolina Central University, ultimately
+							receiving a degree in Music Education. When he isn’t holding down
+							the drumset, Ethan can be found raising the next generation of
+							musicians in the elementary school classroom. Little Onion Boy
+							loves YOU!
 						</Typography>
 					</div>
 				</div>

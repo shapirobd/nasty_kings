@@ -3,6 +3,7 @@ import { useStyles } from "./styles/AboutPageStyles";
 import { Box, Grid } from "@mui/material";
 import greysPhoto from "../../images/grey_hall.jpeg";
 import jacobsPhoto from "../../images/jacob_seyle.jpeg";
+import ethansPhoto from "../../images/ethan_prindle.png";
 import { Typography } from "@material-ui/core";
 
 const AboutPage = () => {
@@ -68,16 +69,16 @@ const AboutPage = () => {
 						/>
 					</Grid>
 				</Grid>
-				<Grid container className={classes.greysSection}>
-					<Grid item xs={12} lg={5} className={classes.photoContainer}>
-						{/* <img src={greysPhoto} className={classes.photo} /> */}
+				<Grid container className={classes.ethansSection}>
+					<Grid item xs={12} lg={6} className={classes.ethansPhotoContainer}>
+						<img src={ethansPhoto} className={classes.ethansPhoto} />
 					</Grid>
 					<Grid
 						item
-						xl={6}
+						// xl={6}
 						lg={5}
 						xs={12}
-						className={classes.descriptionContainer}
+						className={classes.ethansDescriptionContainer}
 					>
 						<Typography className={classes.description}>
 							Ethan Prindle (Little Onion Boy) has been playing the drums since
