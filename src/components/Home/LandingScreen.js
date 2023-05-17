@@ -1,7 +1,7 @@
 import React from "react";
 import { useStyles } from "./styles/LandingScreenStyles";
 import logo from "../../images/logo_vector.png";
-import BandPic from "../../images/ghnk_logo_new.png";
+import BandPic from "../../images/NEW/band_pic_main_duotone_nologo.png";
 
 const LandingScreen = () => {
 	const classes = useStyles();
@@ -9,8 +9,12 @@ const LandingScreen = () => {
 	return (
 		<div
 			className={classes.main}
-			style={{ backgroundImage: `url(${BandPic})` }}
+			// style={{ backgroundImage: `url(${BandPic})` }}
 		>
+			<div
+			className={classes.image}
+			style={{ backgroundImage: `url(${BandPic})` }}
+			></div>
 			{/* <img className={classes.logo} src={logo} alt={logo} /> */}
 		</div>
 	);
