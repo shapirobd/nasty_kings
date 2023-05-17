@@ -21,6 +21,7 @@ export const useStyles = makeStyles((theme) => ({
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center",
+		backgroundPositionY: "15%",
 		overflowY: "hidden",
 	},
 	logo: {
