@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useStyles } from "./styles/MusicPageStyles";
-import logo_bw from "../../images/logo_bw.png";
+// import logo_bw from "../../images/logo_bw.png";
 import SinglesMobile from "./SinglesMobile";
 import AlbumsMobile from "./AlbumsMobile";
 import axios from "axios";

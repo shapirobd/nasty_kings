@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useStyles } from "./styles/ShowsItemStyles";
 import { Typography, Alert, Badge } from "@mui/material";
-import solo_show from "../../images/solo_show_sm.png";
+// import solo_show from "../../images/solo_show_sm.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";

@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./styles/LandingScreenStyles";
-import logo from "../../images/logo_vector.png";
+// import logo from "../../images/logo_vector.png";
 import BandPic from "../../images/NEW/band_pic_main_duotone_nologo.png";
 
 const LandingScreen = () => {
