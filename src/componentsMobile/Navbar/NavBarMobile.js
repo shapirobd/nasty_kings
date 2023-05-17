@@ -15,6 +15,7 @@ const NavBarMobile = ({ currentPage, setCurrentPage }) => {
 		{ route: "/music", text: "MUSIC" },
 		// { route: "/merch", text: "MERCH" },
 		{ route: "/shows", text: "SHOWS" },
+		{ route: "/gallery", text: "GALLERY" },
 		{ route: "/about", text: "ABOUT" },
 		{ route: "/contact", text: "CONTACT" },
 	];

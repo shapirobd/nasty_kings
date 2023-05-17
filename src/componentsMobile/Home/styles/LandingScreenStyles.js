@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
 		margin: "30% 0 20% 0",
 		padding: "0 5%",
 		display: "flex",
+		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
 		backgroundSize: "cover",
