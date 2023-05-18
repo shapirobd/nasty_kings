@@ -26,6 +26,6 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	logo: {
 		height: "75vh",
-		borderRadius: "50%",
+		borderRadius: "50%"
 	},
 }));
