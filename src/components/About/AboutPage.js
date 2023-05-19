@@ -1,9 +1,9 @@
 import React from "react";
 import { useStyles } from "./styles/AboutPageStyles";
 import { Box, Grid } from "@mui/material";
-import greysPhoto from "../../images/grey_hall.jpeg";
+import greysPhoto from "../../images/grey_hall.JPEG";
 import jacobsPhoto from "../../images/jacob_seyle.jpeg";
-import ethansPhoto from "../../images/ethan_prindle.png";
+import ethansPhoto from "../../images/ethan_prindle.JPEG";
 import { Typography } from "@material-ui/core";
 
 const AboutPage = () => {

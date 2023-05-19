@@ -23,7 +23,7 @@ const BlockQuote = () => {
 			</Typography>
 			<Typography
 				variant="body1"
-				sx={{ color: "#fff", width: "90%" }}
+				sx={{ color: "#fff", width: "90%", fontStyle: "italic" }}
 				gutterBottom
 			>
 				- Shakori Hills Music Festival
