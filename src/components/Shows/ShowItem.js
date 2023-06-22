@@ -12,9 +12,16 @@ const ShowItem = ({ show, width, final }) => {
 	library.add(faArrowUpRightFromSquare);
 
 	return (
-		<div className={`${width === "lg" ? 
-				(show.prevShow ? classes.prevShowLg : classes.showLg) : 
-				(show.prevShow ? classes.prevShowMd : classes.showMd)}
+		<div
+			className={`${
+				width === "lg"
+					? show.prevShow
+						? classes.prevShowLg
+						: classes.showLg
+					: show.prevShow
+					? classes.prevShowMd
+					: classes.showMd
+			}
 			${final ? classes.final : ""}`}
 		>
 			{/* {show.solo ? (
@@ -30,8 +37,12 @@ const ShowItem = ({ show, width, final }) => {
 				</div>
 			) : null} */}
 			<div className={classes.date}>
-				<div className={show.prevShow ? classes.prevWeekDay : classes.weekDay}>{show.date.weekDay}</div>
-				<div className={show.prevShow ? classes.prevDay : classes.day}>{show.date.day}</div>
+				<div className={show.prevShow ? classes.prevWeekDay : classes.weekDay}>
+					{show.date.weekDay}
+				</div>
+				<div className={show.prevShow ? classes.prevDay : classes.day}>
+					{show.date.day}
+				</div>
 			</div>
 			<div className={classes.details}>
 				<div>
@@ -41,9 +52,11 @@ const ShowItem = ({ show, width, final }) => {
 					</div>
 					<div className={classes.venue}>{show.venue}</div>
 					<div className={classes.address}>
-						<i>{show.address + " " + show.city + ", " + show.state }</i>
+						<i>{show.address + " " + show.city + ", " + show.state}</i>
 					</div>
-					{show.other_artists && <div className={classes.other_artists}>{show.other_artists}</div>}
+					{show.other_artists && (
+						<div className={classes.other_artists}>{show.other_artists}</div>
+					)}
 				</div>
 				<div className={classes.showLinks}>
 					{/* <a
@@ -58,16 +71,24 @@ const ShowItem = ({ show, width, final }) => {
 						/>
 					</a> */}
 					{show.solo ? (
-						<Alert icon={false} severity="info" variant="filled" className={classes.soloAlert}>SOLO SHOW</Alert>
+						<Alert
+							icon={false}
+							severity="info"
+							variant="filled"
+							className={show.prevShow ? classes.soloAlertPrev : classes.soloAlert}
+						>
+							SOLO SHOW
+						</Alert>
 					) : null}
-					{show.ticketLink && !show.prevShow && 
-						<a href={show.ticketLink}
-						target="_blank"
-						className={classes.ticketBtn}
+					{show.ticketLink && !show.prevShow && (
+						<a
+							href={show.ticketLink}
+							target="_blank"
+							className={classes.ticketBtn}
 						>
 							Buy Tickets
 						</a>
-					}
+					)}
 				</div>
 			</div>
 		</div>

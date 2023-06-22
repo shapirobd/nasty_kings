@@ -101,6 +101,22 @@ export const useStyles = makeStyles((theme) => ({
 		// backgroundColor: "#555 !important",
 		// fontWeight: "bold !important"
 	},
+	soloAlertPrev: {
+		// position: "absolute",
+		right: "2%",
+		top: "20px",
+		width: "15%",
+		display: "flex",
+		justifyContent: "center",
+		// marginBottom: "10px",
+		borderRadius: "20px !important",
+		padding: "0 10px !important",
+		backgroundColor: "#000 !important",
+		border: "1px solid gray",
+		color: "gray"
+		// backgroundColor: "#555 !important",
+		// fontWeight: "bold !important"
+	},
 	date: {
 		height: "200px",
 		width: "200px",

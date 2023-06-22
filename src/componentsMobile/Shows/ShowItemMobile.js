@@ -43,7 +43,7 @@ const ShowItemMobile = ({ show, final }) => {
 					</div>
 					{show.other_artists && <div className={classes.other_artists}>{show.other_artists}</div>}
 					{show.solo ? (
-						<Alert icon={false} severity="info" variant="filled" className={classes.soloAlert}>SOLO SHOW</Alert>
+						<Alert icon={false} severity="info" variant="filled" className={show.prevShow ? classes.soloAlertPrev : classes.soloAlert}>SOLO SHOW</Alert>
 						// <Badge badgeContent={"SOLO SHOW"} color="secondary"></Badge>
 						// <div className={classes.soloShow}>
 						// 	<div className={classes.soloShowLogo}>
