@@ -81,7 +81,7 @@ export const useStyles = makeStyles((theme) => ({
 		padding: "0 10px !important",
 		backgroundColor: "#000 !important",
 		border: "1px solid gray !important",
-		color: "gray",
+		color: "gray !important",
 		// backgroundColor: "#555 !important",
 		// fontWeight: "bold !important"
 	},
