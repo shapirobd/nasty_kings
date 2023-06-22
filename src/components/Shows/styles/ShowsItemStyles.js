@@ -112,8 +112,8 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px !important",
 		padding: "0 10px !important",
 		backgroundColor: "#000 !important",
-		border: "1px solid gray",
-		color: "gray"
+		border: "1px solid gray !important",
+		color: "gray",
 		// backgroundColor: "#555 !important",
 		// fontWeight: "bold !important"
 	},
@@ -161,7 +161,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-between",
-		width: "100%"
+		width: "100%",
 	},
 	fullDate: {
 		fontSize: "18pt",
@@ -174,7 +174,7 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "16pt",
 		fontWeight: "bold",
 		marginTop: "10px",
-		marginBottom: "16px"
+		marginBottom: "16px",
 	},
 	address: {
 		fontSize: "14pt",

@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
 		borderTop: "1px solid gray",
 	},
 	final: {
-		borderBottom: "1px solid gray"
+		borderBottom: "1px solid gray",
 	},
 	left: {
 		display: "flex",
@@ -80,8 +80,8 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px !important",
 		padding: "0 10px !important",
 		backgroundColor: "#000 !important",
-		border: "1px solid gray",
-		color: "gray"
+		border: "1px solid gray !important",
+		color: "gray",
 		// backgroundColor: "#555 !important",
 		// fontWeight: "bold !important"
 	},
@@ -131,7 +131,7 @@ export const useStyles = makeStyles((theme) => ({
 		// fontWeight: "bold",
 		lineHeight: "110%",
 		marginTop: "5px",
-		marginBottom: "15px"
+		marginBottom: "15px",
 	},
 	address: {
 		fontSize: "12pt",
@@ -171,6 +171,6 @@ export const useStyles = makeStyles((theme) => ({
 		color: "white",
 		// color: "#DD0000",
 		fontWeight: "bold",
-		marginBottom: "12px"
+		marginBottom: "12px",
 	},
 }));
