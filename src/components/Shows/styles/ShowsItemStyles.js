@@ -37,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	prevShowLg: {
 		// backgroundColor: "white",
-		color: "lightgray !important",
+		color: "gray !important",
 		padding: "20px",
 		// marginBottom: "50px",
 		height: "200px",
@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	prevShowMd: {
 		// backgroundColor: "white",
-		color: "lightgray !important",
+		color: "gray !important",
 		padding: "20px",
 		// marginBottom: "50px",
 		height: "200px",
@@ -121,7 +121,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
-		color: "lightgray",
+		color: "gray",
 		fontSize: "33px",
 	},
 	day: {
@@ -137,7 +137,7 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
-		color: "lightgray",
+		color: "gray",
 		fontSize: "100px",
 	},
 	details: {

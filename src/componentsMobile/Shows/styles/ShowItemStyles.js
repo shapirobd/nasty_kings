@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	prevShow: {
 		// backgroundColor: "white",
-		color: "lightgray",
+		color: "gray",
 		// paddingRight: "20px",
 		// marginBottom: "50px",
 		height: "fit-content",
