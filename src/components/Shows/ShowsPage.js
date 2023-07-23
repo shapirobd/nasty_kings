@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import axios from 'axios';
 import useWindowDimensions from "../../customHooks/getWindowDimensions";
+import { CirclesWithBar } from 'react-loader-spinner';
 
 const days = [
 	"SUNDAY",
@@ -115,6 +116,7 @@ const ShowsPage = ({ fromHome = false }) => {
 	}
 
 	const [shows, setShows] = useState([]);
+	const [doneLoading, setDoneLoading] = useState(false)
 
 	useEffect(async () => {
 		const getShows = async () => {
@@ -122,6 +124,7 @@ const ShowsPage = ({ fromHome = false }) => {
 				// "http://localhost:5000/shows?forSite=true"
 				"https://ghnk-crm-server.herokuapp.com/shows?forSite=true"
 			);
+			setDoneLoading(true);
 			console.log(resp.data);
 			const showsArr = [];
 			formatShows(resp.data.shows, showsArr, createData);
@@ -161,11 +164,32 @@ const ShowsPage = ({ fromHome = false }) => {
 					>
 						Upcoming Shows
 					</h2>
-					{shows.filter(x => !x.prevShow).map(
-						(show, idx, arr) =>
-						// !show.prevShow && (
-							<ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} final={idx == arr.length - 1} />
-						// )
+					{doneLoading ? (
+						shows.filter((x) => !x.prevShow).map(
+							(show, idx, arr) => (
+								// !show.prevShow && (
+								<ShowItem
+									key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`}
+									show={show}
+									width={showWidth}
+									final={idx == arr.length - 1}
+								/>
+							)
+							// )
+						)
+					) : (
+						<CirclesWithBar
+							height="100"
+							width="100"
+							color="#ffffff"
+							wrapperStyle={{}}
+							wrapperClass=""
+							visible={true}
+							outerCircleColor=""
+							innerCircleColor=""
+							barColor=""
+							ariaLabel="circles-with-bar-loading"
+						/>
 					)}
 				</Grid>
 				<Grid
@@ -181,15 +205,41 @@ const ShowsPage = ({ fromHome = false }) => {
 					<h2
 						// variant="h2"
 						// sx={{ color: "white", fontWeight: "bold" }}s
-						className={`${fromHome ? classes.homeShowsHeader : classes.showsHeader} ${classes.prevShowsHeader}`}
+						className={`${
+							fromHome ? classes.homeShowsHeader : classes.showsHeader
+						} ${classes.prevShowsHeader}`}
 					>
 						Previous Shows
 					</h2>
-					{shows.filter(x => x.prevShow).map(
-						(show, idx, arr) =>
-							// show.prevShow && (
-								<ShowItem key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`} show={show} width={showWidth} final={idx == arr.length - 1} />
-							// )
+
+					{doneLoading ? (
+						shows
+							.filter((x) => x.prevShow)
+							.map(
+								(show, idx, arr) => (
+									// show.prevShow && (
+									<ShowItem
+										key={`${show.venue}__${show.date.month}_${show.date.day}_${show.date.year}`}
+										show={show}
+										width={showWidth}
+										final={idx == arr.length - 1}
+									/>
+								)
+								// )
+							)
+					) : (
+						<CirclesWithBar
+							height="100"
+							width="100"
+							color="#ffffff"
+							wrapperStyle={{}}
+							wrapperClass=""
+							visible={true}
+							outerCircleColor=""
+							innerCircleColor=""
+							barColor=""
+							ariaLabel="circles-with-bar-loading"
+						/>
 					)}
 				</Grid>
 			</Grid>
