@@ -11,4 +11,9 @@ export const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "center",
 	},
+	loadingWheelContainer: {
+		width: "100%",
+		display: "flex",
+		justifyContent: "center",
+	},
 }));

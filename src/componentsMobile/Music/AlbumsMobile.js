@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography } from "@material-ui/core";
 import { useStyles } from "./styles/AlbumsStyles";
 import AlbumMobile from "./AlbumMobile";
 import { getAlbumImages } from "../../helpers";
+import { waitForElm } from "../../helpers";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const AlbumsMobile = ({ albumList, setAlbumList, albumArtLoaded, setAlbumArtLoaded, fromHome }) => {
+	const [hideSpinner, setHideSpinner] = useState(false);
+	waitForElm(".SpotifyPlayer").then(() => {
+		console.log("LOADED!");
+		setHideSpinner(true);
+	});
+	
 	const classes = useStyles();
 
 	useEffect(async () => {
@@ -19,6 +27,22 @@ const AlbumsMobile = ({ albumList, setAlbumList, albumArtLoaded, setAlbumArtLoad
 				Latest Albums
 			</Typography>
 			<div className={classes.albumsContainer}>
+				{!hideSpinner && (
+					<div className={classes.loadingWheelContainer}>
+					<CirclesWithBar
+						height="100"
+						width="100"
+						color="#ffffff"
+						wrapperStyle={{}}
+						wrapperClass=""
+						visible={true}
+						outerCircleColor=""
+						innerCircleColor=""
+						barColor=""
+						ariaLabel="circles-with-bar-loading"
+					/>
+					</div>
+				)}
 				{albumList.map((s) => (
 					<AlbumMobile
 						key={s.name}

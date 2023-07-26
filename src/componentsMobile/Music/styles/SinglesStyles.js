@@ -9,4 +9,9 @@ export const useStyles = makeStyles((theme) => ({
 	albumsContainer: {
 		margin: "30px 0",
 	},
+	loadingWheelContainer: {
+		width: "100%",
+		display: "flex",
+		justifyContent: "center"
+	}
 }));
