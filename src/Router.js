@@ -9,6 +9,7 @@ import ContactPage from "./components/Contact/ContactPage.js";
 import GalleryPage from "./components/Gallery/GalleryPage.js";
 import LandingScreen from "./components/Home/LandingScreen.js";
 import BlockQuote from "./components/Home/BlockQuote.js";
+import Awards from "./components/Home/Awards.js";
 import HomePageMobile from "./componentsMobile/Home/HomePageMobile.js";
 import ShowsPageMobile from "./componentsMobile/Shows/ShowsPageMobile.js";
 import MusicPageMobile from "./componentsMobile/Music/MusicPageMobile.js";
@@ -18,6 +19,7 @@ import ContactPageMobile from "./componentsMobile/Contact/ContactPageMobile.js";
 import GalleryPageMobile from "./componentsMobile/Gallery/GalleryPageMobile.js";
 import LandingScreenMobile from "./componentsMobile/Home/LandingScreenMobile.js";
 import BlockQuoteMobile from "./componentsMobile/Home/BlockQuoteMobile.js";
+import AwardsMobile from "./componentsMobile/Home/AwardsMobile.js";
 import ScrollToTop from "./ScrollToTop";
 
 const Router = ({ mobile }) => {
@@ -30,6 +32,7 @@ const Router = ({ mobile }) => {
 					<>
 						{mobile ? <LandingScreenMobile /> : <LandingScreen />}
 						{mobile ? <BlockQuoteMobile /> : <BlockQuote />}
+						{mobile ? <AwardsMobile /> : <Awards />}
 						{mobile ? <HomePageMobile /> : <HomePage />}
 					</>
 				}
