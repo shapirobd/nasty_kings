@@ -7,7 +7,7 @@ const ContactPage = () => {
 
 	return (
 		<div className={classes.main}>
-			<h3 style={{ fontSize: "3rem", margin: "0" }}>Contact/Booking</h3>
+			<h3 style={{ fontSize: "3rem", margin: "0" }}>Contact / Booking</h3>
 			<div className={classes.email}>
 				<h5 style={{ fontSize: "1.5rem", margin: "0" }}>
 					greylanhallandnastykings@gmail.com
