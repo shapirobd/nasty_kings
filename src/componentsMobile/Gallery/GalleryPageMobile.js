@@ -20,6 +20,13 @@ import POUR_HOUSE_1 from "../../images/Gallery/POUR_HOUSE_1.JPEG";
 import POUR_HOUSE_2 from "../../images/Gallery/POUR_HOUSE_2.JPEG";
 import POUR_HOUSE_3 from "../../images/Gallery/POUR_HOUSE_3.JPEG";
 import POUR_HOUSE_4 from "../../images/Gallery/POUR_HOUSE_4.JPEG";
+import POUR_HOUSE_5 from "../../images/Gallery/POUR_HOUSE_5.JPEG";
+import POUR_HOUSE_6 from "../../images/Gallery/POUR_HOUSE_6.JPEG";
+import POUR_HOUSE_7 from "../../images/Gallery/POUR_HOUSE_7.JPEG";
+import POUR_HOUSE_8 from "../../images/Gallery/POUR_HOUSE_8.JPEG";
+import POUR_HOUSE_9 from "../../images/Gallery/POUR_HOUSE_9.JPEG";
+import POUR_HOUSE_10 from "../../images/Gallery/POUR_HOUSE_10.JPEG";
+import POUR_HOUSE_11 from "../../images/Gallery/POUR_HOUSE_11.JPEG";
 import GalleryItemMobile from "./GalleryItemMobile";
 // import Albums from "./Albums";
 // import axios from "axios";
@@ -32,9 +39,16 @@ const GalleryPageMobile = ({ fromHome = false }) => {
 			<div className={classes.innerDiv}>
 				<ImageList variant="masonry" cols={1} gap={8}>
 					<GalleryItemMobile image={POUR_HOUSE_1} />
+					<GalleryItemMobile image={POUR_HOUSE_5} />
+					<GalleryItemMobile image={POUR_HOUSE_4} />
+					<GalleryItemMobile image={POUR_HOUSE_7} />
+					<GalleryItemMobile image={POUR_HOUSE_10} />
+					<GalleryItemMobile image={POUR_HOUSE_8} />
 					<GalleryItemMobile image={POUR_HOUSE_2} />
 					<GalleryItemMobile image={POUR_HOUSE_3} />
-					<GalleryItemMobile image={POUR_HOUSE_4} />
+					<GalleryItemMobile image={POUR_HOUSE_6} />
+					<GalleryItemMobile image={POUR_HOUSE_9} />
+					<GalleryItemMobile image={POUR_HOUSE_11} />
 					<GalleryItemMobile image={BBI_3976} />
 					<GalleryItemMobile image={BBI_3978} />
 					<GalleryItemMobile image={BBI_3985} />
