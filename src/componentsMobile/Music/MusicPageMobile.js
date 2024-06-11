@@ -52,17 +52,17 @@ const MusicPageMobile = ({ fromHome = false }) => {
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
-				<AlbumsMobile
-					albumList={albumList}
-					setAlbumList={setAlbumList}
-					albumArtLoaded={albumArtLoaded}
-					setAlbumArtLoaded={setAlbumArtLoaded}
-				/>
 				<SinglesMobile
 					singleList={singleList}
 					setSingleList={setSingleList}
 					singleArtLoaded={singleArtLoaded}
 					setSingleArtLoaded={setSingleArtLoaded}
+				/>
+				<AlbumsMobile
+					albumList={albumList}
+					setAlbumList={setAlbumList}
+					albumArtLoaded={albumArtLoaded}
+					setAlbumArtLoaded={setAlbumArtLoaded}
 				/>
 			</div>
 		</div>

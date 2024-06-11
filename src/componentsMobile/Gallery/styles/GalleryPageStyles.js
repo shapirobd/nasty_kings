@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	innerDiv: {
 		padding: "0 4%",
-		marginTop: "150px",
+		marginTop: "50px",
 	},
 	homeInnerDiv: {
 		display: "flex",

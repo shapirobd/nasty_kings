@@ -52,17 +52,17 @@ const MusicPage = ({ fromHome = false }) => {
 	return (
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
-				<Albums
-					albumList={albumList}
-					setAlbumList={setAlbumList}
-					albumArtLoaded={albumArtLoaded}
-					setAlbumArtLoaded={setAlbumArtLoaded}
-				/>
 				<Singles
 					singleList={singleList}
 					setSingleList={setSingleList}
 					singleArtLoaded={singleArtLoaded}
 					setSingleArtLoaded={setSingleArtLoaded}
+				/>
+				<Albums
+					albumList={albumList}
+					setAlbumList={setAlbumList}
+					albumArtLoaded={albumArtLoaded}
+					setAlbumArtLoaded={setAlbumArtLoaded}
 				/>
 			</div>
 		</div>
