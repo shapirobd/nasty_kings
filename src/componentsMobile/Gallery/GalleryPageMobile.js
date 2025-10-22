@@ -28,6 +28,18 @@ import POUR_HOUSE_9 from "../../images/Gallery/POUR_HOUSE_9.JPEG";
 import POUR_HOUSE_10 from "../../images/Gallery/POUR_HOUSE_10.JPEG";
 import POUR_HOUSE_11 from "../../images/Gallery/POUR_HOUSE_11.JPEG";
 import GalleryItemMobile from "./GalleryItemMobile";
+import IMG_20251022_01 from "../../images/Gallery/IMG_20251022_01.JPEG";
+import IMG_20251022_02 from "../../images/Gallery/IMG_20251022_02.JPEG";
+import IMG_20251022_03 from "../../images/Gallery/IMG_20251022_03.JPEG";
+import IMG_20251022_04 from "../../images/Gallery/IMG_20251022_04.JPEG";
+import IMG_20251022_05 from "../../images/Gallery/IMG_20251022_05.JPEG";
+import IMG_20251022_06 from "../../images/Gallery/IMG_20251022_06.JPEG";
+import IMG_20251022_07 from "../../images/Gallery/IMG_20251022_07.JPEG";
+import IMG_20251022_08 from "../../images/Gallery/IMG_20251022_08.JPEG";
+import IMG_20251022_09 from "../../images/Gallery/IMG_20251022_09.JPEG";
+import IMG_20251022_10 from "../../images/Gallery/IMG_20251022_10.JPEG";
+import IMG_20251022_11 from "../../images/Gallery/IMG_20251022_11.JPEG";
+import IMG_20251022_12 from "../../images/Gallery/IMG_20251022_12.JPEG";
 // import Albums from "./Albums";
 // import axios from "axios";
 
@@ -38,6 +50,18 @@ const GalleryPageMobile = ({ fromHome = false }) => {
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
 				<ImageList variant="masonry" cols={1} gap={8}>
+					<GalleryItemMobile image={IMG_20251022_05} />
+					<GalleryItemMobile image={IMG_20251022_09} />
+					<GalleryItemMobile image={IMG_20251022_04} />
+					<GalleryItemMobile image={IMG_20251022_10} />
+					<GalleryItemMobile image={IMG_20251022_11} />
+					<GalleryItemMobile image={IMG_20251022_12} />
+					<GalleryItemMobile image={IMG_20251022_01} />
+					<GalleryItemMobile image={IMG_20251022_02} />
+					<GalleryItemMobile image={IMG_20251022_03} />
+					<GalleryItemMobile image={IMG_20251022_06} />
+					<GalleryItemMobile image={IMG_20251022_07} />
+					<GalleryItemMobile image={IMG_20251022_08} />
 					<GalleryItemMobile image={POUR_HOUSE_1} />
 					<GalleryItemMobile image={POUR_HOUSE_5} />
 					<GalleryItemMobile image={POUR_HOUSE_4} />

@@ -27,6 +27,19 @@ import POUR_HOUSE_8 from "../../images/Gallery/POUR_HOUSE_8.JPEG";
 import POUR_HOUSE_9 from "../../images/Gallery/POUR_HOUSE_9.JPEG";
 import POUR_HOUSE_10 from "../../images/Gallery/POUR_HOUSE_10.JPEG";
 import POUR_HOUSE_11 from "../../images/Gallery/POUR_HOUSE_11.JPEG";
+import IMG_20251022_01 from "../../images/Gallery/IMG_20251022_01.JPEG";
+import IMG_20251022_02 from "../../images/Gallery/IMG_20251022_02.JPEG";
+import IMG_20251022_03 from "../../images/Gallery/IMG_20251022_03.JPEG";
+import IMG_20251022_04 from "../../images/Gallery/IMG_20251022_04.JPEG";
+import IMG_20251022_05 from "../../images/Gallery/IMG_20251022_05.JPEG";
+import IMG_20251022_06 from "../../images/Gallery/IMG_20251022_06.JPEG";
+import IMG_20251022_07 from "../../images/Gallery/IMG_20251022_07.JPEG";
+import IMG_20251022_08 from "../../images/Gallery/IMG_20251022_08.JPEG";
+import IMG_20251022_09 from "../../images/Gallery/IMG_20251022_09.JPEG";
+import IMG_20251022_10 from "../../images/Gallery/IMG_20251022_10.JPEG";
+import IMG_20251022_11 from "../../images/Gallery/IMG_20251022_11.JPEG";
+import IMG_20251022_12 from "../../images/Gallery/IMG_20251022_12.JPEG";
+
 import GalleryItem from "./GalleryItem";
 // import Albums from "./Albums";
 // import axios from "axios";
@@ -39,17 +52,23 @@ const GalleryPage = ({ fromHome = false }) => {
 			<div className={classes.innerDiv}>
 				<ImageList variant="masonry" cols={3} gap={8}>
 					{/* Beginning of 1st column */}
+					<GalleryItem image={IMG_20251022_04} />
+					<GalleryItem image={IMG_20251022_10} />
+					<GalleryItem image={IMG_20251022_01} />
+					<GalleryItem image={IMG_20251022_07} />
 					<GalleryItem image={POUR_HOUSE_1} />
 					<GalleryItem image={POUR_HOUSE_2} />
 					<GalleryItem image={POUR_HOUSE_4} />
 					<GalleryItem image={POUR_HOUSE_3} />
 					<GalleryItem image={BBI_3976} />
 					<GalleryItem image={BBI_3978} />
-					<GalleryItem image={BBI_3985} />
-					<GalleryItem image={IMG_3432} />
 					<GalleryItem image={IMG_3434} />
 
 					{/* Beginning of 2nd column */}
+					<GalleryItem image={IMG_20251022_09} />
+					<GalleryItem image={IMG_20251022_11} />
+					<GalleryItem image={IMG_20251022_02} />
+					<GalleryItem image={IMG_20251022_08} />
 					<GalleryItem image={POUR_HOUSE_7} />
 					<GalleryItem image={POUR_HOUSE_8} />
 					<GalleryItem image={POUR_HOUSE_10} />
@@ -58,9 +77,14 @@ const GalleryPage = ({ fromHome = false }) => {
 					<GalleryItem image={BBI_3993} />
 					<GalleryItem image={BBI_4023} />
 					<GalleryItem image={BBI_4077} />
+					<GalleryItem image={IMG_3432} />
 					<GalleryItem image={IMG_3397} />
 
 					{/* Beginning of 3rd column */}
+					<GalleryItem image={IMG_20251022_05} />
+					<GalleryItem image={IMG_20251022_12} />
+					<GalleryItem image={IMG_20251022_03} />
+					<GalleryItem image={IMG_20251022_06} />
 					<GalleryItem image={POUR_HOUSE_5} />
 					<GalleryItem image={POUR_HOUSE_6} />
 					<GalleryItem image={POUR_HOUSE_11} />
@@ -68,6 +92,7 @@ const GalleryPage = ({ fromHome = false }) => {
 					<GalleryItem image={RL1_7795} />
 					<GalleryItem image={IMG_1216} />
 					<GalleryItem image={IMG_1287} />
+					<GalleryItem image={BBI_3985} />
 					<GalleryItem image={IMG_2142} />
 				</ImageList>
 			</div>
