@@ -9,23 +9,26 @@ const MusicPage = ({ fromHome = false }) => {
 	const classes = useStyles();
 
 	const [singleList, setSingleList] = useState([]);
+	const [newReleaseList, setNewReleaseList] = useState([]);
 	const [albumList, setAlbumList] = useState([]);
 	const [singleArtLoaded, setSingleArtLoaded] = useState(false);
+	const [newReleaseArtLoaded, setNewReleaseArtLoaded] = useState(false);
 	const [albumArtLoaded, setAlbumArtLoaded] = useState(false);
 
 	useEffect(async () => {
-		const getSingles = async () => {
-			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/singles");
-			const singles = [];
-			for (let single of resp.data) {
-				singles.push({
-					name: single.name,
-					url: single.url,
+		const getSongs = async () => {
+			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/songs");
+			const songs = [];
+			for (let song of resp.data) {
+				songs.push({
+					name: song.name,
+					url: song.url,
 					coverArt: "",
-					code: single.code,
+					code: song.code,
+					category: song.category || "Single",
 				});
 			}
-			return singles;
+			return songs;
 		}
 		const getAlbums = async () => {
 			const resp = await axios.get("https://ghnk-crm-server.herokuapp.com/albums");
@@ -41,11 +44,13 @@ const MusicPage = ({ fromHome = false }) => {
 			}
 			return albums;
 		}
-		const singles = await getSingles();
+		const songs = await getSongs();
 		const albums = await getAlbums();
-		setSingleList(singles);
+		setSingleList(songs.filter((s) => s.category === "Single"));
+		setNewReleaseList(songs.filter((s) => s.category === "New Release"));
 		setAlbumList(albums);
 		setSingleArtLoaded(false)
+		setNewReleaseArtLoaded(false)
 		setAlbumArtLoaded(false)
 	}, [])
 
@@ -53,6 +58,14 @@ const MusicPage = ({ fromHome = false }) => {
 		<div className={fromHome ? classes.homeMain : classes.main}>
 			<div className={classes.innerDiv}>
 				<Singles
+					title="New Releases"
+					singleList={newReleaseList}
+					setSingleList={setNewReleaseList}
+					singleArtLoaded={newReleaseArtLoaded}
+					setSingleArtLoaded={setNewReleaseArtLoaded}
+				/>
+				<Singles
+					title="Latest Singles"
 					singleList={singleList}
 					setSingleList={setSingleList}
 					singleArtLoaded={singleArtLoaded}

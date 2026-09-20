@@ -6,7 +6,7 @@ import { getSingleImages } from "../../helpers";
 import { waitForElm } from "../../helpers";
 import { CirclesWithBar } from "react-loader-spinner";
 
-const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoaded, fromHome }) => {
+const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoaded, fromHome, title = "Latest Singles" }) => {
 	const [hideSpinner, setHideSpinner] = useState(false);
 	waitForElm(".SpotifyPlayer").then(() => {
 		console.log("LOADED!");
@@ -36,7 +36,7 @@ const Singles = ({ singleList, setSingleList, singleArtLoaded, setSingleArtLoade
 				className={classes.singlesHeader}
 				// sx={{ fontWeight: "bold" }}
 			>
-				Latest Singles
+				{title}
 			</Typography>
 			<Grid container spacing={5} className={classes.albumsContainer}>
 				{!hideSpinner && (
