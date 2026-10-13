@@ -31,10 +31,11 @@ const AboutPageMobile = () => {
 							proficient on the guitar, so did his ear for different styles of
 							music. By the time he was 18 he was listening and playing styles
 							from bluegrass to rock n’ roll. Greylan eventually went on and
-							earned his music degree in Jazz Guitar/Performance from North
-							Carolina Central University. Greylan formed the Nasty Kings as a
-							result of life long friends who all share a passion for music and
-							musical exploration.
+							earned his bachelor’s degree in Jazz Guitar/Performance and his
+							master’s degree in music, both from North Carolina Central
+							University. Greylan formed the Nasty Kings as a result of life
+							long friends who all share a passion for music and musical
+							exploration.
 						</Typography>
 					</div>
 				</div>
