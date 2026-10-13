@@ -4,6 +4,7 @@ import { Box, Grid } from "@mui/material";
 import greysPhoto from "../../images/grey_hall_new.JPEG";
 import jacobsPhoto from "../../images/jacob_seyle.jpeg";
 import ethansPhoto from "../../images/ethan_prindle.JPEG";
+import marksPhoto from "../../images/mark_voller.jpeg";
 import { Typography } from "@material-ui/core";
 
 const AboutPage = () => {
@@ -92,6 +93,28 @@ const AboutPage = () => {
 							musicians in the elementary school classroom. Little Onion Boy
 							loves YOU!
 						</Typography>
+					</Grid>
+				</Grid>
+				<Grid container className={classes.jacobsSection}>
+					<Grid
+						item
+						xl={6}
+						lg={5}
+						xs={12}
+						className={classes.jacobsDescriptionContainer}
+					>
+						<Typography className={classes.description}>
+							Mark Voller has been playing bass since the age of 14 when he first
+							started jamming and playing in bands. Mark first honed his skills
+							learning tunes by classic rock legends such as Led Zeppelin,
+							learning to improvise from jamming Phish tunes and later learning
+							to love the low end grooves of funk like The Meters, Tower of
+							Power and Lettuce. Mark is a musician and educator, but no matter
+							what he will always protect the groove.
+						</Typography>
+					</Grid>
+					<Grid item xs={12} lg={5} className={classes.jacobPhotoContainer}>
+						<img src={marksPhoto} className={classes.photo} />
 					</Grid>
 				</Grid>
 			</div>
