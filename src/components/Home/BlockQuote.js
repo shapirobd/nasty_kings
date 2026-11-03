@@ -18,7 +18,7 @@ const BlockQuote = () => {
 				though it’s not uncommon to hear them dip their notes in colors of
 				country, jazz, funk and fusion. Based in Durham NC, the passionate
 				quartet features Greylan on majestic guitars, Jacob Seyle on heated
-				Hammond B-3 organ, Matt Grady supplying the low end and Ethan Prindle
+				Hammond B-3 organ, Mark Voller supplying the low end and Ethan Prindle
 				delivering thundering drums.”
 			</Typography>
 			<Typography
